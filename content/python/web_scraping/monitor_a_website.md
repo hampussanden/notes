@@ -1,6 +1,6 @@
 ---
 title: "Monitor A Website For Changes With Python"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Monitor a website for changes with Python."
 type: technical_note

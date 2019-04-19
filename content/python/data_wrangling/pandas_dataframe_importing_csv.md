@@ -1,6 +1,6 @@
 ---
 title: "Loading A CSV Into pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Loading a CSV into pandas."
 type: technical_note

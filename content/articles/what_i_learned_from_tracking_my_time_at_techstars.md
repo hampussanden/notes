@@ -1,6 +1,6 @@
 ---
 title: "What I Learned Tracking My Time At Techstars"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2016-02-01T11:53:49-07:00
 description: "What I Learned Tracking My Time At Techstars."
 type: article
@@ -23,7 +23,7 @@ For three months, from November 2nd, 2015 to January 31st, 2016, I tracked how I
 - **Exercise:** Running (which basically never happened)
 - **Personal:** Time with family, cooking, hobbies, reading, housework etc.
 
-The full data is [available on Github](https://github.com/chrisalbon/techstars_timesheet)I hope you find it useful.
+The full data is [available on Github](https://github.com/hampussanden/techstars_timesheet)I hope you find it useful.
 
 ![Every Day At Techstars Cloud](1.png)
 

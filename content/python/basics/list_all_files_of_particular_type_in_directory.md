@@ -1,6 +1,6 @@
 ---
 title: "List All Files Of Certain Type In A Directory"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2018-11-20T11:53:49-07:00
 description: "List all files of a certain type in a directory using Python"
 type: technical_note

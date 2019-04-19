@@ -1,6 +1,6 @@
 ---
 title: "Search A pandas Column For A Value"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Search a pandas column for a value."
 type: technical_note

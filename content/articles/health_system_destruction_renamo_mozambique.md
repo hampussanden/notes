@@ -1,6 +1,6 @@
 ---
 title: "Health System Destruction During The Mozambican Civil War"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2011-12-20T11:53:49-07:00
 description: "A case study of health system destruction by RENAMO during the Mozambican Civil War."
 type: article

@@ -1,6 +1,6 @@
 ---
 title: "if and if else"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "if and if else in Python."
 type: technical_note

@@ -1,6 +1,6 @@
 ---
 title: "The Structure Of Health Systems"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2011-12-20T11:53:49-07:00
 description: "A descriptive overview of the structure of health systems."
 type: article

@@ -1,6 +1,6 @@
 ---
 title: "Convert A CSV Into Python Code To Recreate It"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Convert a CSV into Python code to recreate it using Python."
 type: technical_note

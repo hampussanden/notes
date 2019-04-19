@@ -1,6 +1,6 @@
 ---
 title: "Match URLs"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Match URLs in Python."
 type: technical_note
@@ -19,7 +19,7 @@ import re
 
 ```python
 # Create a variable containing a text string
-text = 'My blog is http://www.chrisalbon.com and not http://chrisalbon.com'
+text = 'My blog is http://www.hampussanden.com and not http://hampussanden.com'
 ```
 
 ## Apply regex
@@ -33,6 +33,6 @@ re.findall(r'(http|ftp|https):\/\/([\w\-_]+(?:(?:\.[\w\-_]+)+))([\w\-\.,@?^=%&am
 
 
 
-    [('http', 'www.chrisalbon.com', ''), ('http', 'chrisalbon.com', '')]
+    [('http', 'www.hampussanden.com', ''), ('http', 'hampussanden.com', '')]
 
 

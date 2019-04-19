@@ -1,6 +1,6 @@
 ---
 title: "Match US Phone Numbers"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Match US phone numbers in Python."
 type: technical_note

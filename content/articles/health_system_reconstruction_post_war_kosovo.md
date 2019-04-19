@@ -1,6 +1,6 @@
 ---
 title: "Health System Reconstruction In Post-War Kosovo"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2011-12-20T11:53:49-07:00
 description: "A history of health system reconstruction in post-war Kosovo."
 type: article

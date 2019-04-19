@@ -1,6 +1,6 @@
 ---
 title: "Nested For Loops Using List Comprehension"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Nested for loops using list comprehension."
 type: technical_note

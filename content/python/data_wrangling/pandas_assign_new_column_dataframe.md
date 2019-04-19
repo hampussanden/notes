@@ -1,6 +1,6 @@
 ---
 title: "Assign A New Column To A Pandas DataFrame"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Assign A New Column To A Pandas DataFrame."
 type: technical_note

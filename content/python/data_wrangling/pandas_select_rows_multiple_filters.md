@@ -1,6 +1,6 @@
 ---
 title: "Select Rows With Multiple Filters"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Select rows with multiple filters."
 type: technical_note

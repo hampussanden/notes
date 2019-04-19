@@ -1,6 +1,6 @@
 ---
 title: "Convert A String Categorical Variable To A Numeric Variable"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Convert A String Categorical Variable To A Numeric Variable."
 type: technical_note

@@ -1,6 +1,6 @@
 ---
 title: "Break A List Into N-Sized Chunks"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Break a list into n-sized chunks."
 type: technical_note

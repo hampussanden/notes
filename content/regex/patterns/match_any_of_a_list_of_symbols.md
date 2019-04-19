@@ -1,6 +1,6 @@
 ---
 title: "Match Any Of A List Of Characters"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Match any of a list of characters in Python."
 type: technical_note

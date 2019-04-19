@@ -1,6 +1,6 @@
 ---
 title: "Group Pandas Data By Hour Of The Day"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Group data by hour of the day using pandas."
 type: technical_note

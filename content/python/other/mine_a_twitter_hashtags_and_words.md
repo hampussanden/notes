@@ -1,12 +1,12 @@
 ---
 title: "Mine Twitter's Stream For Hashtags Or Words"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Mine Twitter's stream for hashtags or words."
 type: technical_note
 draft: false
 ---
-This is a script which monitor's Twitter for tweets containing certain hashtags, words, or phrases. When one of those appears, it saves that tweet, and the user's information to a csv file. A similar version of this script is available on [GitHub here](https://github.com/chrisalbon/twitter_miner). The main difference between the code presented here and the repo is that here I am added extensive comments in the code explaining what is happening. Also, the code below runs as a Jupyter notebook.
+This is a script which monitor's Twitter for tweets containing certain hashtags, words, or phrases. When one of those appears, it saves that tweet, and the user's information to a csv file. A similar version of this script is available on [GitHub here](https://github.com/hampussanden/twitter_miner). The main difference between the code presented here and the repo is that here I am added extensive comments in the code explaining what is happening. Also, the code below runs as a Jupyter notebook.
 
 To get the code below to run, you need to added your own Twitter API credentials.
 

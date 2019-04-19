@@ -1,6 +1,6 @@
 ---
 title: "Find Unique Values In Pandas Dataframes"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Find unique values in pandas dataframes."
 type: technical_note

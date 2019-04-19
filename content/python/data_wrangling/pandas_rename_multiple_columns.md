@@ -1,6 +1,6 @@
 ---
 title: "Rename Multiple pandas Dataframe Column Names"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Rename multiple pandas dataframe column names."
 type: technical_note

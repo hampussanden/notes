@@ -1,6 +1,6 @@
 ---
 title: "Saving A pandas Dataframe As A CSV"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Saving a pandas dataframe as a CSV."
 type: technical_note

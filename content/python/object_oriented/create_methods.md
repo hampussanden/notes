@@ -1,6 +1,6 @@
 ---
 title: "Create Methods"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2018-12-16T11:53:49-07:00
 description: "How to create methods for a class in object oriented programming in Python."
 type: technical_note

@@ -1,6 +1,6 @@
 ---
 title: "Creating A Time Series Plot With Seaborn And pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Creating a time series plot with Seaborn and pandas."
 type: technical_note

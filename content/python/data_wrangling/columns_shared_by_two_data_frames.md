@@ -1,6 +1,6 @@
 ---
 title: "Columns Shared By Two Data Frames"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2018-03-12T11:53:49-07:00
 description: "Find the columns shared by two data frames in Pandas."
 type: technical_note

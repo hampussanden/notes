@@ -1,6 +1,6 @@
 ---
 title: "Drilling Down With Beautiful Soup"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Drilling Down With Beautiful Soup."
 type: technical_note

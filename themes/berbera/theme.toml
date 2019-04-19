@@ -6,8 +6,8 @@ features = ["responsive", "blog"]
 min_version = 0.25
 
 [author]
-  name = "Chris Albon"
-  homepage = "https://chrisalbon.com"
+  name = "Hampus Sandén"
+  homepage = "https://hampussanden.com"
 
 [based on]
   name = "Alan Orth"

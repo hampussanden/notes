@@ -1,6 +1,6 @@
 ---
 title: "Load A JSON File Into Pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "How to quickly load a JSON file into pandas."
 type: technical_note
@@ -19,7 +19,7 @@ import pandas as pd
 
 ```python
 # Create URL to JSON file (alternatively this can be a filepath)
-url = 'https://raw.githubusercontent.com/chrisalbon/simulated_datasets/master/data.json'
+url = 'https://raw.githubusercontent.com/hampussanden/simulated_datasets/master/data.json'
 
 # Load the first sheet of the JSON file into a data frame
 df = pd.read_json(url, orient='columns')

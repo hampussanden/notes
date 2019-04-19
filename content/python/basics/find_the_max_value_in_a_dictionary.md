@@ -1,6 +1,6 @@
 ---
 title: "Find The Max Value In A Dictionary"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Find the max value in a dictionary using Python."
 type: technical_note

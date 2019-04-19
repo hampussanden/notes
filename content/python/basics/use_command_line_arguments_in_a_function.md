@@ -1,6 +1,6 @@
 ---
 title: "Use Command Line Arguments In A Function"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "How to use command line arguments in a function in Python."
 type: technical_note

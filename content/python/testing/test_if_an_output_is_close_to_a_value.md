@@ -1,6 +1,6 @@
 ---
 title: "Test If Output Is Close To A Value"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Test if output is close to a value using Python."
 type: technical_note

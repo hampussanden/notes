@@ -1,6 +1,6 @@
 ---
 title: "Create a Column Based on a Conditional in pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Create a Column Based on a Conditional in pandas."
 type: technical_note

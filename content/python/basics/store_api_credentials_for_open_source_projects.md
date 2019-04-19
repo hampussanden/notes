@@ -1,6 +1,6 @@
 ---
 title: "Store API Credentials For Open Source Projects"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Store API credentials for open source projects."
 type: technical_note

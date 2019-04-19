@@ -1,6 +1,6 @@
 ---
 title: "Scatterplot In MatPlotLib"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Scatterplot In MatPlotLib."
 type: technical_note
@@ -26,7 +26,7 @@ pd.set_option('display.max_columns', 50)
 
 
 ```python
-df = pd.read_csv('https://raw.githubusercontent.com/chrisalbon/war_of_the_five_kings_dataset/master/5kings_battles_v1.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/hampussanden/war_of_the_five_kings_dataset/master/5kings_battles_v1.csv')
 df.head()
 ```
 

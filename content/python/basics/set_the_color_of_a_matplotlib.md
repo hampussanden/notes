@@ -1,6 +1,6 @@
 ---
 title: "Set The Color Of A Matplotlib Plot"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Set the color of a MatPlotLib plot."
 type: technical_note

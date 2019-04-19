@@ -1,6 +1,6 @@
 ---
 title: "Beautiful Soup Basic HTML Scraping"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Beautiful soup basic HTML scraping."
 type: technical_note
@@ -43,7 +43,7 @@ soup.title
 
 
 
-    <title>Chris Albon</title>
+    <title>Hampus Sandén</title>
 
 
 
@@ -58,7 +58,7 @@ soup.title.string
 
 
 
-    'Chris Albon'
+    'Hampus Sandén'
 
 
 
@@ -101,7 +101,7 @@ soup.a
 
 
 
-    <a class="navbar-brand" href=".">Chris Albon</a>
+    <a class="navbar-brand" href=".">Hampus Sandén</a>
 
 
 
@@ -115,11 +115,11 @@ soup.find_all('a')[0:5]
 
 
 
-    [<a class="navbar-brand" href=".">Chris Albon</a>,
+    [<a class="navbar-brand" href=".">Hampus Sandén</a>,
      <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">About<span class="caret"></span></a>,
-     <a href="./pages/about.html">About Chris</a>,
-     <a href="https://github.com/chrisalbon">GitHub</a>,
-     <a href="https://twitter.com/chrisalbon">Twitter</a>]
+     <a href="./pages/about.html">About Hampus</a>,
+     <a href="https://github.com/hampussanden">GitHub</a>,
+     <a href="https://twitter.com/hampussanden">Twitter</a>]
 
 
 
@@ -158,10 +158,10 @@ soup.find_all('a')[0:5]
 
 
 
-    [<a class="navbar-brand" href=".">Chris Albon</a>,
+    [<a class="navbar-brand" href=".">Hampus Sandén</a>,
      <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">About<span class="caret"></span></a>,
-     <a href="./pages/about.html">About Chris</a>,
-     <a href="https://github.com/chrisalbon">GitHub</a>,
-     <a href="https://twitter.com/chrisalbon">Twitter</a>]
+     <a href="./pages/about.html">About Hampus</a>,
+     <a href="https://github.com/hampussanden">GitHub</a>,
+     <a href="https://twitter.com/hampussanden">Twitter</a>]
 
 

@@ -1,6 +1,6 @@
 ---
 title: "List Unique Values In A pandas Column"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "List unique values in a pandas column."
 type: technical_note

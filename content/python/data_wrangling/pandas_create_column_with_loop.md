@@ -1,6 +1,6 @@
 ---
 title: "Create A pandas Column With A For Loop"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Create a pandas column with a for loop."
 type: technical_note

@@ -1,6 +1,6 @@
 ---
 title: "Sort A List Of Strings By Length"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Sort a list of strings by length."
 type: technical_note

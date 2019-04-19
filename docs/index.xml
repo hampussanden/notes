@@ -1557,10 +1557,10 @@ Preliminaries # Load libraries from sklearn.datasets import load_iris from sklea
     
     <item>
       <title>About Hampus Sandén</title>
-      <link>https://hampussanden.com/about/chris_albon/</link>
+      <link>https://hampussanden.com/about/hampus_sanden/</link>
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
-      <guid>https://hampussanden.com/about/chris_albon/</guid>
+      <guid>https://hampussanden.com/about/hampus_sanden/</guid>
       <description>I am a data scientist and machine learning engineer formally trained as a quantitative political scientist. I am the Director of Data Science at Devoted Health, using data science and machine learning to help fix America&amp;rsquo;s health care system. Previously, I was Chief Data Scientist at the Kenyan startup BRCK, founded the AI company New Knowledge, cohosted the data science podcast Partially Derivative, led the humanitarian non-profit Ushahidi&amp;rsquo;s work on crisis data, and was the director of the low-resource technology governance project at FrontlineSMS.</description>
     </item>
     

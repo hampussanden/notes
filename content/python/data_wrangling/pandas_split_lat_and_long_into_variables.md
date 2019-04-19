@@ -1,6 +1,6 @@
 ---
 title: "Split Lat/Long Coordinate Variables Into Seperate Variables"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Split lat/long coordinate variables into seperate variables."
 type: technical_note

@@ -1,6 +1,6 @@
 ---
 title: "Geolocate A City Or Country"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Geolocate a city or country in Python."
 type: technical_note

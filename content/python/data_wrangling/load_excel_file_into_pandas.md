@@ -1,6 +1,6 @@
 ---
 title: "Load An Excel File Into Pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "How to quickly load an Excel file into pandas."
 type: technical_note
@@ -19,7 +19,7 @@ import pandas as pd
 
 ```python
 # Create URL to Excel file (alternatively this can be a filepath)
-url = 'https://raw.githubusercontent.com/chrisalbon/simulated_datasets/master/data.xlsx'
+url = 'https://raw.githubusercontent.com/hampussanden/simulated_datasets/master/data.xlsx'
 
 # Load the first sheet of the Excel file into a data frame
 df = pd.read_excel(url, sheetname=0, header=1)

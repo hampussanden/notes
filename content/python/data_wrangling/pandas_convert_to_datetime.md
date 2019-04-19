@@ -1,6 +1,6 @@
 ---
 title: "Convert A Variable To A Time Variable In pandas"
-author: "Chris Albon"
+author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
 description: "Convert A Variable To A Time Variable In Pandas."
 type: technical_note
