@@ -35,7 +35,6 @@ I earned a Ph.D. in Political Science from the University of California, Davis r
 
 -   **Director of Data Science**, [Devoted Health](http://www.devoted.com/), 2018 - Present
 -   **Chief Data Scientist**, [BRCK](https://www.brck.com/), 2017 - 2018
--   **Author**, [Machine Learning With Python Cookbook](https://amzn.to/2HwnWty), [O’Reilly Media](https://www.oreilly.com/), 2018
 -   **Creator**, [Machine Learning Flashcards](http://machinelearningflashcards.com/), 2017
 -   **Co-founder & Co-host**, [Partially Derivative](http://www.partiallyderivative.com), 2014 - 2017
     -   Co-founded a podcast on data and data science.
