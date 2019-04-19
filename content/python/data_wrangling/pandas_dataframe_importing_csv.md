@@ -594,8 +594,6 @@ df
 
 
 
-
-
 ### Load a csv while specifying "." as missing values
 
 
