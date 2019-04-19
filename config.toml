@@ -1,0 +1,10 @@
+baseURL = "https://www.hampussanden.com/"
+languageCode = "en-us"
+title = "Hampus Sandén"
+theme = "berbera"
+
+pygmentsCodeFences=true
+pygmentsUseClasses=true
+canonifyURLs=true
+publishDir="docs"
+disableKinds = ["section", "taxonomy", "taxonomyTerm"]
