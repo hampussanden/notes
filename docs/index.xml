@@ -56,15 +56,5 @@
       <description>In the fall of 2015, New Knowledge, I cofounded with two friends was offered a slot in the 2016 class of Techstars Cloud. Like most people in tech, I had heard about Techstars, but in truth I barely knew anything specific, particularly about the day-to-day of the program. Was Techstars a permanent hackathon fueled by Soylent and Adderall? Was it three months of guest speakers and sponsored happy hours? I watched Techstars&amp;rsquo;s promotional videos, but the only impression I could glean was that all the founders worked 36 hours per day while having ample spare time to ride bikes around downtown Boulder.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://hampussanden.com/articles/forecasting_part_1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hampussanden.com/articles/forecasting_part_1/</guid>
-      <description>Forecasting Website Traffic (Time Series Data) with Facebook Prophet - Part 1 : Prediction What is Prophet? Prophet is a forecasting tool from Facebook which is optimized for creating business forecasts of time series data.
-Prophet is an open source forecasting tool built by Facebook. It can be used for time series modeling and forecasting trends into the future. Prophet is interesting because it&amp;rsquo;s both sophisticated and quite easy to use, so it&amp;rsquo;s possible to generate very good forecasts with relatively little effort or domain knowledge in time series analysis.</description>
-    </item>
-    
   </channel>
 </rss>
