@@ -56,5 +56,14 @@
       <description>In the fall of 2015, New Knowledge, I cofounded with two friends was offered a slot in the 2016 class of Techstars Cloud. Like most people in tech, I had heard about Techstars, but in truth I barely knew anything specific, particularly about the day-to-day of the program. Was Techstars a permanent hackathon fueled by Soylent and Adderall? Was it three months of guest speakers and sponsored happy hours? I watched Techstars&amp;rsquo;s promotional videos, but the only impression I could glean was that all the founders worked 36 hours per day while having ample spare time to ride bikes around downtown Boulder.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/</guid>
+      <description># https://medium.com/@chaimgluck1/working-with-pandas-fixing-messy-column-names-42a54a6659cd Fixing messy column names the easy way with pandas Import modules import pandas as pd import re Load sample data df = pd.read_html(&amp;#39;http://www.fasttrack.co.uk/league-tables/tech-track-100/league-table/&amp;#39; , header=0)[0]df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Rank Company Location Year end Annual sales rise over 3 years Latest sales £000s Staff Comment     0 1 Plan.</description>
+    </item>
+    
   </channel>
 </rss>
