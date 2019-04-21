@@ -1,9 +1,11 @@
-
-
-```python
-# https://medium.com/@chaimgluck1/working-with-pandas-fixing-messy-column-names-42a54a6659cd
-```
-
+---
+title: "Fixing messy columns names the easy way with pandas"
+author: "Hampus Sandén"
+date: 2017-12-20T11:53:49-07:00
+description: "Fixing messy columns names the easy way with pandas"
+type: technical_note
+draft: false
+---
 # Fixing messy column names the easy way with pandas
 
 ### Import modules
