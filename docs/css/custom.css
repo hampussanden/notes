@@ -543,7 +543,7 @@ table,tr,th,td{
   border:1px solid black;
   border-collapse:collapse;
   padding: 5px;
-  font-size: .95em;
+  font-size: .85em;
 }
 
 td, th{
@@ -555,6 +555,7 @@ td, th{
 th{
   font-weight:bold;
 }
+
 
 /* ---------------------------------------------------------
 Render Math
