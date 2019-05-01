@@ -16,13 +16,16 @@ gtag('config', 'UA-138686867-1');
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="" />
+<meta property="og:title" content="Ping Website" />
+<meta property="og:description" content="How to ping a website using the Linux command line." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hampussanden.com/linux/basics/ping_website/" />
 
 
 
+<meta property="article:published_time" content="2018-06-17T00:00:00-07:00"/>
+
+<meta property="article:modified_time" content="2018-06-17T00:00:00-07:00"/>
 
 
 
@@ -35,15 +38,29 @@ gtag('config', 'UA-138686867-1');
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Ping Website"/>
+<meta name="twitter:description" content="How to ping a website using the Linux command line."/>
 <meta name="generator" content="Hugo 0.40.1" /> 
     
     
-    
-    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ping Website",
+  "url": "https://hampussanden.com/linux/basics/ping_website/",
+  "wordCount": "206",
+  "datePublished": "2018-06-17T00:00:00-07:00",
+  "dateModified": "2018-06-17T00:00:00-07:00",
+  "author": {
+    "@type": "Person",
+    "name": "Hampus Sandén"
+  },
+  "description": "How to ping a website using the Linux command line."
+}
+</script> 
 
-    <title>404 - Page Missing</title>
+    <title>Ping Website</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -133,60 +150,61 @@ MathJax.Hub.Config({
         <div class="row">
             <div class="col-sm-12">
 
-                
+                 
+
+
 <article>
-  <div class="content">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="card">
-          <h1 class="card-header">
-            <center>
-              <h4>Error - Page Missing</h4>
-            </center>
-          </h1>
-          <div class="card-body">
-            <p>You have found a link that is broken. However, there is hope. Here is every single page on the site listed alphabetically. Use <code>control-f</code> (Windows) or <code>cmd-f</code> (MacOS) to search page titles.</p>
-            <ul>
-              
-              <li>
-                <a href="https://hampussanden.com/about/hampus_sanden/">About Hampus Sandén</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/python/basics/applying_functions_to_list_items/">Applying Functions To List Items</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/">Exploratory Analysis Of The Swedish Housing Market With Python</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/">Fixing messy columns names the easy way with pandas</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/">Hampus Sandén</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/">Loading A CSV Into pandas</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/python/data_visualisation/matplotlib_pie_chart/">Pie Chart In MatPlotLib</a>
-              </li>
-              
-              <li>
-                <a href="https://hampussanden.com/linux/basics/ping_website/">Ping Website</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="technical_note">
+  <header>
+    <h1 class="technical_note_title">Ping Website</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2018-06-17T00:00:00-07:00 "> 17 Jun 2018</time>
     </div>
-  </div>
+  </header>
+  <div class="content">
+  
+
+<p>Linux makes it easy to ping a website to test connectivity and/or whether the website is live. Once executed, <code>ping</code> will ping the website until it is stopped by pressing <code>ctrl-C</code>.</p>
+
+<h2 id="ping-google-com">Ping Google.com</h2>
+
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">ping google.com</code></pre></div>
+
+<pre><code>PING google.com (172.217.4.174) 56(84) bytes of data.
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=1 ttl=56 time=41.8 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=2 ttl=56 time=35.7 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=3 ttl=56 time=43.6 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=4 ttl=56 time=38.1 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=5 ttl=56 time=38.2 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=6 ttl=56 time=44.0 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=7 ttl=56 time=35.6 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=8 ttl=56 time=46.5 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=9 ttl=56 time=36.9 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=10 ttl=56 time=36.4 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=11 ttl=56 time=38.7 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=12 ttl=56 time=46.5 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=13 ttl=56 time=33.9 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=14 ttl=56 time=37.5 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=15 ttl=56 time=36.0 ms
+64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=16 ttl=56 time=46.0 ms
+
+--- google.com ping statistics ---
+26 packets transmitted, 26 received, 0% packet loss, time 25037ms
+rtt min/avg/max/mdev = 31.967/39.521/46.579/4.073 ms
+</code></pre>
+
+</div>
+  <aside>
+      <div class="bug_reporting">
+          <h4>Find an error or bug?</h4>
+          <p>Everything on this site is available on GitHub. Head to <a href='https://github.com/hampussanden/notes/issues/new'>and submit a suggested change</a>. You can also message me directly on <a href='https://twitter.com/hampussanden'>Twitter</a>.</p>
+      </div>
+      </aside>
+
+    </div>
 </article>
+
+
 
 
             </div>
