@@ -56,14 +56,5 @@
       <description>Preliminaries %matplotlib inline import pandas as pd import matplotlib.pyplot as plt Create dataframe raw_data = {&amp;#39;officer_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;jan_arrests&amp;#39;: [4, 24, 31, 2, 3], &amp;#39;feb_arrests&amp;#39;: [25, 94, 57, 62, 70], &amp;#39;march_arrests&amp;#39;: [5, 43, 23, 23, 51]} df = pd.DataFrame(raw_data, columns = [&amp;#39;officer_name&amp;#39;, &amp;#39;jan_arrests&amp;#39;, &amp;#39;feb_arrests&amp;#39;, &amp;#39;march_arrests&amp;#39;]) df    officer_name jan_arrests feb_arrests march_arrests     0 Jason 4 25 5   1 Molly 24 94 43   2 Tina 31 57 23   3 Jake 2 62 23   4 Amy 3 70 51     # Create a column with the total arrests for each officer df[&amp;#39;total_arrests&amp;#39;] = df[&amp;#39;jan_arrests&amp;#39;] + df[&amp;#39;feb_arrests&amp;#39;] + df[&amp;#39;march_arrests&amp;#39;] df    officer_name jan_arrests feb_arrests march_arrests total_arrests     0 Jason 4 25 5 34   1 Molly 24 94 43 161   2 Tina 31 57 23 111   3 Jake 2 62 23 87   4 Amy 3 70 51 124     Make plot # Create a list of colors (from iWantHue) colors = [&amp;#34;#E13F29&amp;#34;, &amp;#34;#D69A80&amp;#34;, &amp;#34;#D63B59&amp;#34;, &amp;#34;#AE5552&amp;#34;, &amp;#34;#CB5C3B&amp;#34;, &amp;#34;#EB8076&amp;#34;, &amp;#34;#96624E&amp;#34;] # Create a pie chart plt.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/</guid>
-      <description>--- title: &amp;#34;Exploratory Analysis Of The Swedish Housing Market&amp;#34; author: &amp;#34;Hampus Sandén&amp;#34; date: 2019-05-01T11:53:49+02:00 description: &amp;#34;Exploratory Analysis Of The Swedish Housing Market&amp;#34; type: article draft: false aliases: - /blog/what-i-learned-tracking-my-time-at-techstars.html ---</description>
-    </item>
-    
   </channel>
 </rss>
