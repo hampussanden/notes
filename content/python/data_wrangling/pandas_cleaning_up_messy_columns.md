@@ -6,7 +6,7 @@ description: "Fixing messy columns names the easy way with pandas"
 type: technical_note
 draft: false
 ---
-# Fixing messy column names the easy way with pandas
+# Cleaning up messy columns
 
 ### Import modules
 
