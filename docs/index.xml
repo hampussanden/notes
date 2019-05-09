@@ -6,10 +6,20 @@
     <description>Recent content on Hampus Sandén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 10:51:49 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="https://hampussanden.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ping Website</title>
+      <link>https://hampussanden.com/linux/basics/ping_website/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 -0700</pubDate>
+      
+      <guid>https://hampussanden.com/linux/basics/ping_website/</guid>
+      <description>Linux makes it easy to ping a website to test connectivity and/or whether the website is live. Once executed, ping will ping the website until it is stopped by pressing ctrl-C.
+Ping Google.com ping google.com PING google.com (216.58.211.142) 56(84) bytes of data. 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=1 ttl=56 time=8.90 ms 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=2 ttl=56 time=12.9 ms 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=3 ttl=56 time=9.08 ms 64 bytes from arn09s10-in-f142.</description>
+    </item>
     
     <item>
       <title>Exploratory Analysis Of The Swedish Housing Market With Python</title>
@@ -18,16 +28,6 @@
       
       <guid>https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/</guid>
       <description>import os import pandas as pd import numpy as npraw_data = {&amp;#39;first_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;last_name&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;age&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df.head() .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    first_name last_name age preTestScore postTestScore     0 Jason Miller 42 4 25,000   1 Molly Jacobson 52 24 94,000   2 Tina .</description>
-    </item>
-    
-    <item>
-      <title>Ping Website</title>
-      <link>https://hampussanden.com/linux/basics/ping_website/</link>
-      <pubDate>Sun, 17 Jun 2018 00:00:00 -0700</pubDate>
-      
-      <guid>https://hampussanden.com/linux/basics/ping_website/</guid>
-      <description>Linux makes it easy to ping a website to test connectivity and/or whether the website is live. Once executed, ping will ping the website until it is stopped by pressing ctrl-C.
-Ping Google.com ping google.com PING google.com (172.217.4.174) 56(84) bytes of data. 64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=1 ttl=56 time=41.8 ms 64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=2 ttl=56 time=35.7 ms 64 bytes from lax28s01-in-f174.1e100.net (172.217.4.174): icmp_seq=3 ttl=56 time=43.6 ms 64 bytes from lax28s01-in-f174.</description>
     </item>
     
     <item>
