@@ -535,7 +535,7 @@ Tables
 ---------------------------------------------------------*/
 
 table{
-  margin: 1em;
+  margin: 1em; 
 }
 
 table,tr,th,td{
@@ -547,13 +547,20 @@ table,tr,th,td{
 }
 
 td, th{
-  text-align:left;
+  text-align:right;
   vertical-align:middle;
   word-break:break-all;
+  border-top: none !important;
+  padding: .35em !important;
 }
 
 th{
   font-weight:bold;
+  border-bottom: none !important;
+}
+
+.table {
+  width: auto !important;
 }
 
 
