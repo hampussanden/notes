@@ -54,7 +54,7 @@ Ping Google.com ping google.com PING google.com (216.58.211.142) 56(84) bytes of
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/</guid>
-      <description>Fixing messy column names the easy way with pandas Import modules import pandas as pd import re Load sample data df = pd.read_html(&amp;#39;http://www.fasttrack.co.uk/league-tables/tech-track-100/league-table/&amp;#39; , header=0)[0]df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Rank Company Location Year end Annual sales rise over 3 years Latest sales £000s Staff Comment     0 1 Plan.</description>
+      <description>Cleaning up messy columns Import modules import pandas as pd import re Load sample data df = pd.read_html(&amp;#39;http://www.fasttrack.co.uk/league-tables/tech-track-100/league-table/&amp;#39; , header=0)[0]df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Rank Company Location Year end Annual sales rise over 3 years Latest sales £000s Staff Comment     0 1 Plan.</description>
     </item>
     
     <item>
