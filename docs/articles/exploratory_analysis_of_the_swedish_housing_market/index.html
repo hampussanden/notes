@@ -20,27 +20,13 @@ gtag('config', 'UA-138686867-1');
 <meta property="og:description" content="Exploratory Analysis Of The Swedish Housing Market With Python" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/" />
-
-
-
-<meta property="article:published_time" content="2019-05-01T10:51:49&#43;02:00"/>
-
-<meta property="article:modified_time" content="2019-05-01T10:51:49&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-05-01T10:51:49+02:00" />
+<meta property="article:modified_time" content="2019-05-01T10:51:49+02:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Exploratory Analysis Of The Swedish Housing Market With Python"/>
 <meta name="twitter:description" content="Exploratory Analysis Of The Swedish Housing Market With Python"/>
-<meta name="generator" content="Hugo 0.40.1" /> 
+<meta name="generator" content="Hugo 0.74.1" /> 
     
     
 <script type="application/ld+json">
@@ -48,10 +34,10 @@ gtag('config', 'UA-138686867-1');
   "@context": "http://schema.org",
   "@type": "BlogPosting",
   "headline": "Exploratory Analysis Of The Swedish Housing Market With Python",
-  "url": "https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/",
-  "wordCount": "110",
-  "datePublished": "2019-05-01T10:51:49&#43;02:00",
-  "dateModified": "2019-05-01T10:51:49&#43;02:00",
+  "url": "https:\/\/hampussanden.com\/articles\/exploratory_analysis_of_the_swedish_housing_market\/",
+  "wordCount": "68",
+  "datePublished": "2019-05-01T10:51:49\u002b02:00",
+  "dateModified": "2019-05-01T10:51:49\u002b02:00",
   "author": {
     "@type": "Person",
     "name": "Hampus Sandén"
@@ -166,83 +152,27 @@ MathJax.Hub.Config({
     <div class="content">
     <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">raw_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jason&#39;</span><span class="p">,</span> <span class="s1">&#39;Molly&#39;</span><span class="p">,</span> <span class="s1">&#39;Tina&#39;</span><span class="p">,</span> <span class="s1">&#39;Jake&#39;</span><span class="p">,</span> <span class="s1">&#39;Amy&#39;</span><span class="p">],</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">raw_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jason&#39;</span><span class="p">,</span> <span class="s1">&#39;Molly&#39;</span><span class="p">,</span> <span class="s1">&#39;Tina&#39;</span><span class="p">,</span> <span class="s1">&#39;Jake&#39;</span><span class="p">,</span> <span class="s1">&#39;Amy&#39;</span><span class="p">],</span> 
         <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Miller&#39;</span><span class="p">,</span> <span class="s1">&#39;Jacobson&#39;</span><span class="p">,</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span> <span class="s1">&#39;Milner&#39;</span><span class="p">,</span> <span class="s1">&#39;Cooze&#39;</span><span class="p">],</span> 
         <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">73</span><span class="p">],</span> 
         <span class="s1">&#39;preTestScore&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span> <span class="s2">&#34;.&#34;</span><span class="p">],</span>
         <span class="s1">&#39;postTestScore&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;25,000&#34;</span><span class="p">,</span> <span class="s2">&#34;94,000&#34;</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">70</span><span class="p">]}</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;preTestScore&#39;</span><span class="p">,</span> <span class="s1">&#39;postTestScore&#39;</span><span class="p">])</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></code></pre></div>
-<div class="table-responsive text-nowrap">
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="table table-striped">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>first_name</th>
-      <th>last_name</th>
-      <th>age</th>
-      <th>preTestScore</th>
-      <th>postTestScore</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Jason</td>
-      <td>Miller</td>
-      <td>42</td>
-      <td>4</td>
-      <td>25,000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Molly</td>
-      <td>Jacobson</td>
-      <td>52</td>
-      <td>24</td>
-      <td>94,000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Tina</td>
-      <td>.</td>
-      <td>36</td>
-      <td>31</td>
-      <td>57</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jake</td>
-      <td>Milner</td>
-      <td>24</td>
-      <td>.</td>
-      <td>62</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amy</td>
-      <td>Cooze</td>
-      <td>73</td>
-      <td>.</td>
-      <td>70</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python">
+</code></pre></div>
   </div>
     <aside>
         <div class="biography">
