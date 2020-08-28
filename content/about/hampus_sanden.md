@@ -12,28 +12,17 @@ outputs:
 
 <img src="hampus_sanden_banner.jpg"></img>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## About Hampus Sandén
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+My name is Hampus Sandén and i'm partner and co-founder of a digital marketing agency called 56K digital. I work as a data analyst where my main area of expertise is the Google Marketing Platform stack and Google Cloud products.
+
+I grew up in a small town in southern Sweden called Kristianstad and have a background in digital marketing and web development. I’ve been programming actively since 2008, and I built my first website/blog that same year. Marketing, affiliate, and web analytics all fell into my sphere of interest shortly after. In recent years that interest has shifted into the Data Science field and Python is as of couple of years back now my main language of choice.
+
+This blog is my personal notebook where i collect and share what i've learned through the years but also it is a way for me to learn what i'm currently working on and there's no better way than to try and write it down in a clear and consice manner. If you've found your way to my blog i greet you with a warm welcome and hope that some of my experience in the field can help you in your journey.
+
+## Contact me
+You can contact me through any of the following links in the header/menu or any of the mediums below: 
 
 -   Email: 	&#104;&#097;&#109;&#112;&#117;&#115;&#115;&#097;&#110;&#100;&#101;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
 -   Twitter: [@hampussanden](https://twitter.com/hampussanden)
-
-## Curriculum Vitae
-
-### Education
-
--   **Accelerated Bachelor Degree**, Medieinstitutet 2013-2014
-    -   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    -   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-### Work Experience
-
--   **Partner, 56K digital**, [56K digital](https://56kdigital.com/), 2017 - Present
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-### Other Experience
--   **Contributor**, [Example](https://56kdigital.com), 2017 - 2018
-    -   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+-   LinkedIn: [@hampussanden](https://www.linkedin.com/in/hampussanden/)
