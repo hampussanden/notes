@@ -471,6 +471,7 @@ pre {
 
 .highlight pre{
   border: 1px solid #ccc;
+  border-radius: 5px;
   line-height: 1.42857143;
   padding: 1em;
 }
@@ -535,33 +536,28 @@ Tables
 ---------------------------------------------------------*/
 
 table{
-  margin: 1em; 
+  margin: 1em;
 }
 
 table,tr,th,td{
   font-family: sans-serif;
-  border:none;
+  border:1px solid black;
   border-collapse:collapse;
   padding: 5px;
   font-size: .95em;
 }
 
 td, th{
-  text-align:right;
+  text-align:left;
   vertical-align:middle;
   word-break:break-all;
-  border-top: none !important;
-  padding: .35em !important;
 }
 
 th{
   font-weight:bold;
-  border-bottom: none !important;
 }
 
-.table {
-  width: auto !important;
-}
+
 
 
 /* ---------------------------------------------------------

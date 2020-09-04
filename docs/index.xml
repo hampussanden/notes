@@ -6,10 +6,20 @@
     <description>Recent content on Hampus Sandén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 May 2019 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 11:53:49 +0200</lastBuildDate>
     
 	<atom:link href="https://hampussanden.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Split a list into evenly sized chunks</title>
+      <link>https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/</link>
+      <pubDate>Thu, 20 Aug 2020 11:53:49 +0200</pubDate>
+      
+      <guid>https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/</guid>
+      <description>In this snippet we will take a list of arbitrary length and split it up into equal size chunks. It is very common that you will have to do this when working with APIs that have a maximum request size. The most elegant way to do this in python is to use a generator function that will keep slicing your list into another list of given size.
+This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again.</description>
+    </item>
     
     <item>
       <title>Ping Website</title>
@@ -19,15 +29,6 @@
       <guid>https://hampussanden.com/linux/basics/ping_website/</guid>
       <description>Linux makes it easy to ping a website to test connectivity and/or whether the website is live. Once executed, ping will ping the website until it is stopped by pressing ctrl-C.
 Ping Google.com ping google.com PING google.com (216.58.211.142) 56(84) bytes of data. 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=1 ttl=56 time=8.90 ms 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=2 ttl=56 time=12.9 ms 64 bytes from arn09s10-in-f142.1e100.net (216.58.211.142): icmp_seq=3 ttl=56 time=9.08 ms 64 bytes from arn09s10-in-f142.</description>
-    </item>
-    
-    <item>
-      <title>Exploratory Analysis Of The Swedish Housing Market With Python</title>
-      <link>https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/</link>
-      <pubDate>Wed, 01 May 2019 10:51:49 +0200</pubDate>
-      
-      <guid>https://hampussanden.com/articles/exploratory_analysis_of_the_swedish_housing_market/</guid>
-      <description>import os import pandas as pd import numpy as npraw_data = {&amp;#39;first_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;last_name&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;age&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df.head() .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    first_name last_name age preTestScore postTestScore     0 Jason Miller 42 4 25,000   1 Molly Jacobson 52 24 94,000   2 Tina .</description>
     </item>
     
     <item>

@@ -16,22 +16,36 @@ gtag('config', 'UA-138686867-1');
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Hampus Sandén" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hampussanden.com/" />
-<meta property="og:updated_time" content="2020-08-20T11:53:49&#43;02:00"/>
+<meta property="og:title" content="Split a list into evenly sized chunks" />
+<meta property="og:description" content="Split a list into evenly sized chunks" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/" /><meta property="article:published_time" content="2020-08-20T11:53:49&#43;02:00"/>
+<meta property="article:modified_time" content="2020-08-20T11:53:49&#43;02:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hampus Sandén"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Split a list into evenly sized chunks"/>
+<meta name="twitter:description" content="Split a list into evenly sized chunks"/>
 <meta name="generator" content="Hugo 0.53" /> 
     
     
-    
-    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Split a list into evenly sized chunks",
+  "url": "https:\/\/hampussanden.com\/python\/data_wrangling\/split_a_list_into_evenly_sized_chunks\/",
+  "wordCount": "232",
+  "datePublished": "2020-08-20T11:53:49\u002b02:00",
+  "dateModified": "2020-08-20T11:53:49\u002b02:00",
+  "author": {
+    "@type": "Person",
+    "name": "Hampus Sandén"
+  },
+  "description": "Split a list into evenly sized chunks"
+}
+</script> 
 
-    <title>Hampus Sandén</title>
+    <title>Split a list into evenly sized chunks</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -42,7 +56,7 @@ gtag('config', 'UA-138686867-1');
     <link href="https://hampussanden.com/css/syntax.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
         
-    <link href="https://hampussanden.com/index.xml" rel="alternate" type="application/rss+xml" title="Hampus Sandén" /> 
+    <link href="" rel="alternate" type="application/rss+xml" title="Hampus Sandén" /> 
     
     <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -120,138 +134,44 @@ MathJax.Hub.Config({
         <div class="row">
             <div class="col-sm-12">
 
-                
-<main>
-    <div class="homepage">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>
-                    <span class="minor_line">Personal notebook on</span>
-                    <br>
-                    <span class="major_line">Data Science &amp; Machine Learning</span>
-                    <br>
-                    <span class="minor_line">Trying to make sense of data</span>
-                </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 blurb">
-                <p>
-                    <a href="https://hampussanden.com/about/hampus_sanden/">I am a Data Analyst</a> and partner at a digital marketing agency called 56K digital. This notebook is my way of sharing what i've learned so far in the field of data collection, data processing and data visualisation. 
-                </p>
-            </div>
-        </div>
-
-        <div class="row" id="python">
-            <div class="col-sm-12">
-                <h3 class="category_header">Python</h3>
-            </div>
-        </div>
+                 
 
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/python/basics/applying_functions_to_list_items/">Applying Functions To List Items</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<article>
+  <div class="technical_note">
+  <header>
+    <h1 class="technical_note_title">Split a list into evenly sized chunks</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-08-20T11:53:49&#43;02:00 "> 20 Aug 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <p>In this snippet we will take a list of arbitrary length and split it up into equal size chunks. It is very common that you will have to do this when working with APIs that have a maximum request size. The most elegant way to do this in python is to use a generator function that will keep slicing your list into another list of given size.</p>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Data Wrangling</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/">Fixing messy columns names the easy way with pandas</a>
-                            </li>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/">Loading A CSV Into pandas</a>
-                            </li>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/">Split a list into evenly sized chunks</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<p>This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again. The yield keyword will help a function to remember its state and enables it to suspend and resume while it turns in a value at the time of the suspension of the execution.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of first names</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a function called &#34;chunks&#34; with two arguments, l and n:</span>
+<span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># For item i in a range that is a length of l,</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="n">n</span><span class="p">):</span>
+        <span class="c1"># Create an index range for l of n items:</span>
+        <span class="k">yield</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list that from the results of the function chunks:</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">chunks</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span></code></pre></div>
+<pre><code>[[0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14], [15, 16, 17]]
+</code></pre>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Data Visualisation</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/python/data_visualisation/matplotlib_pie_chart/">Pie Chart In MatPlotLib</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="linux">
-            <div class="col-sm-12">
-                <h3 class="category_header">Linux Command Line</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <h4 class="card-header">Basics</h4>
-                    <div class="card-body">
-                        <ul>
-                            
-                            <li>
-                                <a href="https://hampussanden.com/linux/basics/ping_website/">Ping Website</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="articles">
-            <div class="col-sm-12">
-                <h3 class="category_header">Articles</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="article_list card-body">
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+  <aside>
+      <div class="bug_reporting">
+          <h4>Find an error or bug?</h4>
+          <p>Everything on this site is available on GitHub. Head to <a href='https://github.com/hampussanden/notes/issues/new'>and submit a suggested change</a>. You can also message me directly on <a href='https://twitter.com/hampussanden'>Twitter</a>.</p>
+      </div>
+      </aside>
 
     </div>
+</article>
 
-</main>
+
 
 
             </div>

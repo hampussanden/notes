@@ -4,9 +4,13 @@ author: "Hampus Sandén"
 date: 2020-08-20T11:53:49+02:00
 description: "How to pass sensitive information to a Google Cloud Function"
 type: article
-draft: false
+draft: true
 ---
-# Using Secrets in Google Cloud Functions
+
+```python
+# https://dev.to/googlecloud/using-secrets-in-google-cloud-functions-5aem
+# https://codelabs.developers.google.com/codelabs/secret-manager-python/#0
+```
 
 Google Cloud Functions makes it easy to build serverless Python programs. This post will show you how you can use the Google Secret Manager to safely and securely use secrets in your function.
 
@@ -18,5 +22,16 @@ We'll do this by storing our secret with the Google Secret Manager, and accessin
 
 
 ```python
+import os
+from google.cloud import secretmanager
 
+client = secretmanager.SecretManagerServiceClient()
+secret_name = "my-secret"
+project_id = os.environ["GCP_PROJECT"]
+resource_name = f"projects/{project_id}/secrets/{secret_name}/versions/latest"
+response = client.access_secret_version(resource_name)
+secret_string = response.payload.data.decode('UTF-8')
+
+def secret_hello(request):
+    return secret_string
 ```
