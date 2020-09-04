@@ -1,5 +1,5 @@
 ---
-title: "Split a list into evenly sized chunks"
+title: "Split A List Into Evenly Sized Chunks"
 author: "Hampus Sandén"
 date: 2020-08-20T11:53:49+02:00
 description: "Split a list into evenly sized chunks"
@@ -10,7 +10,7 @@ aliases:
 ---
 In this snippet we will take a list of arbitrary length and split it up into equal size chunks. It is very common that you will have to do this when working with APIs that have a maximum request size. The most elegant way to do this in python is to use a generator function that will keep slicing your list into another list of given size.
 
-This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again. The yield keyword will help a function to remember its state and enables it to suspend and resume while it turns in a value at the time of the suspension of the execution.
+This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again. The yield keyword will help a function to remember its state and allows the caller to pause its execution and return some value, in our case we are returning a small chunk of a list.
 
 
 ```python

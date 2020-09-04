@@ -16,14 +16,14 @@ gtag('config', 'UA-138686867-1');
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Split a list into evenly sized chunks" />
+<meta property="og:title" content="Split A List Into Evenly Sized Chunks" />
 <meta property="og:description" content="Split a list into evenly sized chunks" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/" /><meta property="article:published_time" content="2020-08-20T11:53:49&#43;02:00"/>
 <meta property="article:modified_time" content="2020-08-20T11:53:49&#43;02:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Split a list into evenly sized chunks"/>
+<meta name="twitter:title" content="Split A List Into Evenly Sized Chunks"/>
 <meta name="twitter:description" content="Split a list into evenly sized chunks"/>
 <meta name="generator" content="Hugo 0.53" /> 
     
@@ -32,9 +32,9 @@ gtag('config', 'UA-138686867-1');
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Split a list into evenly sized chunks",
+  "headline": "Split A List Into Evenly Sized Chunks",
   "url": "https:\/\/hampussanden.com\/python\/data_wrangling\/split_a_list_into_evenly_sized_chunks\/",
-  "wordCount": "232",
+  "wordCount": "234",
   "datePublished": "2020-08-20T11:53:49\u002b02:00",
   "dateModified": "2020-08-20T11:53:49\u002b02:00",
   "author": {
@@ -45,7 +45,7 @@ gtag('config', 'UA-138686867-1');
 }
 </script> 
 
-    <title>Split a list into evenly sized chunks</title>
+    <title>Split A List Into Evenly Sized Chunks</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -140,7 +140,7 @@ MathJax.Hub.Config({
 <article>
   <div class="technical_note">
   <header>
-    <h1 class="technical_note_title">Split a list into evenly sized chunks</h1>
+    <h1 class="technical_note_title">Split A List Into Evenly Sized Chunks</h1>
     <div class="technical_note_date">
       <time datetime=" 2020-08-20T11:53:49&#43;02:00 "> 20 Aug 2020</time>
     </div>
@@ -148,7 +148,7 @@ MathJax.Hub.Config({
   <div class="content">
   <p>In this snippet we will take a list of arbitrary length and split it up into equal size chunks. It is very common that you will have to do this when working with APIs that have a maximum request size. The most elegant way to do this in python is to use a generator function that will keep slicing your list into another list of given size.</p>
 
-<p>This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again. The yield keyword will help a function to remember its state and enables it to suspend and resume while it turns in a value at the time of the suspension of the execution.</p>
+<p>This function differs from a regular function, because we are using the yield keyword which enables the function to comeback where it left off when it is called again. The yield keyword will help a function to remember its state and allows the caller to pause its execution and return some value, in our case we are returning a small chunk of a list.</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of first names</span>
 <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a function called &#34;chunks&#34; with two arguments, l and n:</span>
 <span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
