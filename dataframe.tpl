@@ -2,11 +2,11 @@
 
 
 {% block output %}
-    {% if '<table border="1" class="dataframe">' in cell.output %}
-        <div class="dataframe-wrapper">
-        {{ super() }}
-        </div>
-    {% else %}
-        {{ super() }}
-    {% endif %}
+{% if 'nodataframe' in cell['metadata'].get('tags', []) %}
+    {{ super() }}
+{% else %} 
+<div class="dataframe-wrapper">
+    {{ super() }}
+</div>
+{% endif %}
 {% endblock output %}

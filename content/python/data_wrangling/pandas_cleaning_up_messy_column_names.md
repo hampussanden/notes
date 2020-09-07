@@ -4,7 +4,7 @@ author: "Hampus Sandén"
 date: 2020-08-20T11:53:49+02:00
 description: "Cleaning Up Messy Column Names"
 type: technical_note
-draft: false
+draft: true
 aliases:
     - /python/pandas_cleaning_up_messy_column_names.html
 ---
@@ -21,8 +21,9 @@ df = pd.read_csv('data/iowa_liqour_sales.csv')
 df.head()
 ```
 
+ 
+<div class="dataframe-wrapper">
     
-        
 
 
 
@@ -195,7 +196,8 @@ df.head()
 
 
 
-    
+</div>
+
 
 Now you can’t reference the columns with the convenient .{column name here} notation. You’ll have to do the [''] thing. It’s not the most horrible thing that ever happened, you’ve been through a lot. You can take it. But you’re used to the other way. Plus, what’s with those parentheses? You can’t have that.
 Luckily, pandas has a convenient .str method that you can use on text data. Since the column names are an ‘index’ type, you can use .str on them too. You can fix all these lapses of judgement by chaining together a bunch of these .str functions. Like so:
@@ -206,8 +208,9 @@ df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replac
 df.head()
 ```
 
+ 
+<div class="dataframe-wrapper">
     
-        
 
 
 
@@ -380,4 +383,5 @@ df.head()
 
 
 
-    
+</div>
+

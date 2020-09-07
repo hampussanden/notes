@@ -34,8 +34,8 @@ def chunks(l, n):
 list(chunks(numbers, 5))
 ```
 
+
     
-        
 
 
 
@@ -43,4 +43,4 @@ list(chunks(numbers, 5))
 
 
 
-    
+

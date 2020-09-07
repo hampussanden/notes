@@ -31,8 +31,9 @@ for i in regimentNames:
 regimentNamesCapitalized_f
 ```
 
+ 
+<div class="dataframe-wrapper">
     
-        
 
 
 
@@ -44,7 +45,8 @@ regimentNamesCapitalized_f
 
 
 
-    
+</div>
+
 
 ## Using Map()
 
@@ -62,8 +64,9 @@ capitalizer = lambda x: x.upper()
 regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentNamesCapitalized_m
 ```
 
+ 
+<div class="dataframe-wrapper">
     
-        
 
 
 
@@ -75,7 +78,8 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
 
 
 
-    
+</div>
+
 
 ## Using List Comprehension
 
@@ -86,8 +90,9 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
 regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCapitalized_l
 ```
 
+ 
+<div class="dataframe-wrapper">
     
-        
 
 
 
@@ -99,4 +104,5 @@ regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCa
 
 
 
-    
+</div>
+
