@@ -197,12 +197,10 @@ plt.tight_layout()
 plt.show()
 ```
 
- 
-<div class="dataframe-wrapper">
+
     
 
 ![png](matplotlib_pie_chart_7_0.png)
 
 
-</div>
 
