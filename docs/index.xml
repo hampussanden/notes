@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Cleaning Up Messy Column Names</title>
+      <link>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_column_names/</link>
+      <pubDate>Thu, 20 Aug 2020 11:53:49 +0200</pubDate>
+      
+      <guid>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_column_names/</guid>
+      <description>Sometimes you load in that DataFrame from a csv or excel file that some unlucky excel user created and you just wish everyone used Python. Why do they have to make the column names uppercase, with spaces, and whitespace all around? Do they like doing this to you? They probably hate you, that’s it. They did this:
+import pandas as pddf = pd.read_csv(&amp;#39;data/iowa_liqour_sales.csv&amp;#39;) df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .</description>
+    </item>
+    
+    <item>
       <title>Split A List Into Evenly Sized Chunks</title>
       <link>https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/</link>
       <pubDate>Thu, 20 Aug 2020 11:53:49 +0200</pubDate>
@@ -48,15 +58,6 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
       
       <guid>https://hampussanden.com/python/basics/applying_functions_to_list_items/</guid>
       <description>Create a list of regiment names regimentNames = [&amp;#39;Night Riflemen&amp;#39;, &amp;#39;Jungle Scouts&amp;#39;, &amp;#39;The Dragoons&amp;#39;, &amp;#39;Midnight Revengence&amp;#39;, &amp;#39;Wily Warriors&amp;#39;] Using A For Loop Create a for loop goes through the list and capitalizes each # create a variable for the for loop results regimentNamesCapitalized_f = [] # for every item in regimentNames for i in regimentNames: # capitalize the item and add it to regimentNamesCapitalized_f regimentNamesCapitalized_f.append(i.upper()) # View the outcome regimentNamesCapitalized_f [&#39;NIGHT RIFLEMEN&#39;, &#39;JUNGLE SCOUTS&#39;, &#39;THE DRAGOONS&#39;, &#39;MIDNIGHT REVENGENCE&#39;, &#39;WILY WARRIORS&#39;]  Using Map() Create a lambda function that capitalizes x capitalizer = lambda x: x.</description>
-    </item>
-    
-    <item>
-      <title>Fixing messy columns names the easy way with pandas</title>
-      <link>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/</link>
-      <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
-      
-      <guid>https://hampussanden.com/python/data_wrangling/pandas_cleaning_up_messy_columns/</guid>
-      <description>Cleaning up messy columns Import modules import pandas as pd import re Load sample data df = pd.read_html(&amp;#39;http://www.fasttrack.co.uk/league-tables/tech-track-100/league-table/&amp;#39; , header=0)[0]df.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Rank Company Location Year end Annual sales rise over 3 years Latest sales £000s Staff Comment     0 1 Plan.</description>
     </item>
     
     <item>

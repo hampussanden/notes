@@ -29,6 +29,8 @@ df = pd.DataFrame(raw_data, columns = ['first_name', 'last_name', 'age', 'preTes
 df
 ```
 
+    
+        
 
 
 
@@ -104,6 +106,8 @@ df
 
 
 
+    
+
 ### Save dataframe as csv in the working director
 
 
@@ -119,6 +123,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv')
 df
 ```
 
+    
+        
 
 
 
@@ -200,6 +206,8 @@ df
 
 
 
+    
+
 ### Load a csv with no headers
 
 
@@ -208,6 +216,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', header=None)
 df
 ```
 
+    
+        
 
 
 
@@ -298,6 +308,8 @@ df
 
 
 
+    
+
 ### Load a csv while specifying column names
 
 
@@ -306,6 +318,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', names=['UID', 'Fi
 df
 ```
 
+    
+        
 
 
 
@@ -396,6 +410,8 @@ df
 
 
 
+    
+
 ### Load a csv with setting the index column to UID
 
 
@@ -404,6 +420,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', index_col='UID', 
 df
 ```
 
+    
+        
 
 
 
@@ -495,6 +513,8 @@ df
 
 
 
+    
+
 ### Load a csv while setting the index columns to First Name and Last Name
 
 
@@ -503,6 +523,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', index_col=['First
 df
 ```
 
+    
+        
 
 
 
@@ -594,6 +616,8 @@ df
 
 
 
+    
+
 
 
 ### Load a csv while specifying "." as missing values
@@ -604,6 +628,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=['.'])
 pd.isnull(df)
 ```
 
+    
+        
 
 
 
@@ -685,6 +711,8 @@ pd.isnull(df)
 
 
 
+    
+
 ### Load a csv while specifying "." and "NA" as missing values in the Last Name column and "." as missing values in Pre-Test Score column
 
 
@@ -698,6 +726,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=sentine
 df
 ```
 
+    
+        
 
 
 
@@ -779,6 +809,8 @@ df
 
 
 
+    
+
 ### Load a csv while skipping the top 3 rows
 
 
@@ -787,6 +819,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=sentine
 df
 ```
 
+    
+        
 
 
 
@@ -841,6 +875,8 @@ df
 
 
 
+    
+
 ### Load a csv while interpreting "," in strings around numbers as thousands seperators
 
 
@@ -849,6 +885,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', thousands=',')
 df
 ```
 
+    
+        
 
 
 
@@ -929,3 +967,5 @@ df
 </div>
 
 
+
+    

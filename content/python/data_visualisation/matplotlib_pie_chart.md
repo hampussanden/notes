@@ -27,6 +27,8 @@ df = pd.DataFrame(raw_data, columns = ['officer_name', 'jan_arrests', 'feb_arres
 df
 ```
 
+    
+        
 
 
 
@@ -83,6 +85,8 @@ df
 
 
 
+    
+
 
 ```python
 # Create a column with the total arrests for each officer
@@ -90,6 +94,8 @@ df['total_arrests'] = df['jan_arrests'] + df['feb_arrests'] + df['march_arrests'
 df
 ```
 
+    
+        
 
 
 
@@ -152,6 +158,8 @@ df
 
 
 
+    
+
 ## Make plot
 
 
@@ -185,6 +193,10 @@ plt.tight_layout()
 plt.show()
 ```
 
+    
+        
 
 ![png](matplotlib_pie_chart_7_0.png)
 
+
+    

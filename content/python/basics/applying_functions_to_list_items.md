@@ -31,6 +31,8 @@ for i in regimentNames:
 regimentNamesCapitalized_f
 ```
 
+    
+        
 
 
 
@@ -41,6 +43,8 @@ regimentNamesCapitalized_f
      'WILY WARRIORS']
 
 
+
+    
 
 ## Using Map()
 
@@ -58,6 +62,8 @@ capitalizer = lambda x: x.upper()
 regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentNamesCapitalized_m
 ```
 
+    
+        
 
 
 
@@ -68,6 +74,8 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
      'WILY WARRIORS']
 
 
+
+    
 
 ## Using List Comprehension
 
@@ -78,6 +86,8 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
 regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCapitalized_l
 ```
 
+    
+        
 
 
 
@@ -88,3 +98,5 @@ regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCa
      'WILY WARRIORS']
 
 
+
+    
