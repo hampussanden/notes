@@ -14,11 +14,11 @@ outputs:
 
 ## About Hampus Sandén
 
-My name is Hampus Sandén and i'm partner and co-founder of a digital marketing agency called 56K digital. I work as a data analyst where my main area of expertise is the Google Marketing Platform stack and Google Cloud products.
+My name is Hampus Sandén and I work as a data analyst at a digital marketing firm in Stockholm, Sweden. In my day today work i work with all products that are included in the Google Marketing Platform- and Google Cloud stack.
 
-I grew up in a small town in southern Sweden called Kristianstad and have a background in digital marketing and web development. I’ve been programming actively since 2008, and I built my first website/blog that same year. Marketing, affiliate, and web analytics all fell into my sphere of interest shortly after. In recent years that interest has shifted into the Data Science field and Python is as of couple of years back now my main language of choice.
+I grew up in a small town in southern Sweden called Kristianstad and have a background in digital marketing and web development. I’ve been programming actively since 2008, and I built my first website/blog that same year. Marketing, affiliate, and web analytics all fell into my sphere of interest shortly after. In recent years that interest has shifted into the Data Science field and Python has in recent years become my main language of choice.
 
-This blog is my personal notebook where i collect and share what i've learned through the years but also it is a way for me to learn what i'm currently working on and there's no better way than to try and write it down in a clear and consice manner. If you've found your way to my blog i greet you with a warm welcome and hope that some of my experience in the field can help you in your journey.
+This blog is my personal notebook where i collect and share what i've learned through the years but it is also a way for me to learn what i'm currently working on and there's no better way than to try and write it down in a clear and consice manner. If you've found your way to my blog i greet you with a warm welcome and hope that some of my experience in the field will help you on your journey.
 
 ## Contact me
 You can contact me through any of the following links in the header/menu or any of the mediums below: 
