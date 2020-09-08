@@ -163,20 +163,12 @@ MathJax.Hub.Config({
     
 <span class="c1"># View the outcome</span>
 <span class="n">regimentNamesCapitalized_f</span></code></pre></div>
-<div class="dataframe-wrapper">
-    
-
-
-
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
-
-
-
-</div>
+<pre><code>['NIGHT RIFLEMEN',
+ 'JUNGLE SCOUTS',
+ 'THE DRAGOONS',
+ 'MIDNIGHT REVENGENCE',
+ 'WILY WARRIORS']
+</code></pre>
 
 <h2 id="using-map">Using Map()</h2>
 
@@ -184,39 +176,23 @@ MathJax.Hub.Config({
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">capitalizer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span></code></pre></div>
 <h3 id="map-the-capitalizer-function-to-regimentnames-convert-the-map-into-a-list-and-view-the-variable">Map the capitalizer function to regimentNames, convert the map into a list, and view the variable</h3>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regimentNamesCapitalized_m</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">capitalizer</span><span class="p">,</span> <span class="n">regimentNames</span><span class="p">));</span> <span class="n">regimentNamesCapitalized_m</span></code></pre></div>
-<div class="dataframe-wrapper">
-    
-
-
-
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
-
-
-
-</div>
+<pre><code>['NIGHT RIFLEMEN',
+ 'JUNGLE SCOUTS',
+ 'THE DRAGOONS',
+ 'MIDNIGHT REVENGENCE',
+ 'WILY WARRIORS']
+</code></pre>
 
 <h2 id="using-list-comprehension">Using List Comprehension</h2>
 
 <h3 id="apply-the-expression-x-upper-to-each-item-in-the-list-called-regiment-names-then-view-the-output">Apply the expression x.upper to each item in the list called regiment names. Then view the output</h3>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regimentNamesCapitalized_l</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">regimentNames</span><span class="p">];</span> <span class="n">regimentNamesCapitalized_l</span></code></pre></div>
-<div class="dataframe-wrapper">
-    
-
-
-
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
-
-
-
-</div>
+<pre><code>['NIGHT RIFLEMEN',
+ 'JUNGLE SCOUTS',
+ 'THE DRAGOONS',
+ 'MIDNIGHT REVENGENCE',
+ 'WILY WARRIORS']
+</code></pre>
 
 </div>
   <aside>
