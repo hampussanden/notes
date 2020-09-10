@@ -34,7 +34,7 @@ gtag('config', 'UA-138686867-1');
   "@type": "BlogPosting",
   "headline": "Applying Functions To List Items",
   "url": "https:\/\/hampussanden.com\/python\/basics\/applying_functions_to_list_items\/",
-  "wordCount": "163",
+  "wordCount": "233",
   "datePublished": "2017-12-20T11:53:49-07:00",
   "dateModified": "2017-12-20T11:53:49-07:00",
   "author": {
@@ -148,50 +148,46 @@ MathJax.Hub.Config({
   <div class="content">
   
 
-<h3 id="create-a-list-of-regiment-names">Create a list of regiment names</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regimentNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Night Riflemen&#39;</span><span class="p">,</span> <span class="s1">&#39;Jungle Scouts&#39;</span><span class="p">,</span> <span class="s1">&#39;The Dragoons&#39;</span><span class="p">,</span> <span class="s1">&#39;Midnight Revengence&#39;</span><span class="p">,</span> <span class="s1">&#39;Wily Warriors&#39;</span><span class="p">]</span></code></pre></div>
+<p>Sometimes you want to transform your lists items and there is a couple of ways to do that. Below are three examples of how you would apply a function function that capitalizes characters from <code>['a', 'b', 'c']</code> to <code>['A', 'B', 'C']</code>.</p>
+
+<p>In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in <code>map()</code> function which iterates over the list with str.upper applied. In the third example we apply the string method <code>upper()</code> in a list comprehension.</p>
+
+<h2 id="create-a-list-with-characters">Create a list with characters</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alphabet</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span></code></pre></div>
 <h2 id="using-a-for-loop">Using A For Loop</h2>
 
-<h3 id="create-a-for-loop-goes-through-the-list-and-capitalizes-each">Create a for loop goes through the list and capitalizes each</h3>
+<h3 id="create-a-for-loop-that-goes-through-the-list-alphabet-and-capitalizes-each-character">Create a for loop that goes through the list alphabet and capitalizes each character</h3>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># create a variable for the for loop results</span>
-<span class="n">regimentNamesCapitalized_f</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">alphabet_capitalized_for_loop</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c1"># for every item in regimentNames</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">regimentNames</span><span class="p">:</span>
-    <span class="c1"># capitalize the item and add it to regimentNamesCapitalized_f</span>
-    <span class="n">regimentNamesCapitalized_f</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="c1"># for every item in alphabet</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">:</span>
+    <span class="c1"># capitalize the item and add it to alphabet_capitalized_for_loop</span>
+    <span class="n">alphabet_capitalized_for_loop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
     
-<span class="c1"># View the outcome</span>
-<span class="n">regimentNamesCapitalized_f</span></code></pre></div>
-<pre><code>['NIGHT RIFLEMEN',
- 'JUNGLE SCOUTS',
- 'THE DRAGOONS',
- 'MIDNIGHT REVENGENCE',
- 'WILY WARRIORS']
+<span class="c1"># view the outcome</span>
+<span class="n">alphabet_capitalized_for_loop</span></code></pre></div>
+<pre><code>['G', 'O', 'O', 'G', 'L', 'E']
 </code></pre>
 
 <h2 id="using-map">Using Map()</h2>
 
-<h3 id="create-a-lambda-function-that-capitalizes-x">Create a lambda function that capitalizes x</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">capitalizer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span></code></pre></div>
-<h3 id="map-the-capitalizer-function-to-regimentnames-convert-the-map-into-a-list-and-view-the-variable">Map the capitalizer function to regimentNames, convert the map into a list, and view the variable</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regimentNamesCapitalized_m</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">capitalizer</span><span class="p">,</span> <span class="n">regimentNames</span><span class="p">));</span> <span class="n">regimentNamesCapitalized_m</span></code></pre></div>
-<pre><code>['NIGHT RIFLEMEN',
- 'JUNGLE SCOUTS',
- 'THE DRAGOONS',
- 'MIDNIGHT REVENGENCE',
- 'WILY WARRIORS']
+<h3 id="map-the-capitalizer-function-to-the-list-alphabet-and-convert-the-map-into-a-list">Map the capitalizer function to the list alphabet and convert the map into a list</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alphabet_capitalized_map</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span> <span class="n">alphabet</span><span class="p">))</span>
+
+<span class="c1"># view the outcome</span>
+<span class="n">alphabet_capitalized_map</span></code></pre></div>
+<pre><code>['G', 'O', 'O', 'G', 'L', 'E']
 </code></pre>
 
 <h2 id="using-list-comprehension">Using List Comprehension</h2>
 
-<h3 id="apply-the-expression-x-upper-to-each-item-in-the-list-called-regiment-names-then-view-the-output">Apply the expression x.upper to each item in the list called regiment names. Then view the output</h3>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">regimentNamesCapitalized_l</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">regimentNames</span><span class="p">];</span> <span class="n">regimentNamesCapitalized_l</span></code></pre></div>
-<pre><code>['NIGHT RIFLEMEN',
- 'JUNGLE SCOUTS',
- 'THE DRAGOONS',
- 'MIDNIGHT REVENGENCE',
- 'WILY WARRIORS']
+<h3 id="apply-the-expression-x-upper-to-each-item-in-the-list-alphabet">Apply the expression x.upper to each item in the list alphabet</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">alphabet_capitalized_list_comprehension</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">]</span>
+
+<span class="c1"># view the outcome</span>
+<span class="n">alphabet_capitalized_list_comprehension</span></code></pre></div>
+<pre><code>['G', 'O', 'O', 'G', 'L', 'E']
 </code></pre>
 
 </div>

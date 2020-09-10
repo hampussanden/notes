@@ -1,8 +1,8 @@
 ---
-title: "Read/Import a CSV File Using Pandas"
+title: "Read/Import A CSV File Using Pandas"
 author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
-description: "Read/Import a CSV File Using Pandas"
+description: "Read/Import A CSV File Using Pandas"
 type: technical_note
 draft: false
 aliases:
