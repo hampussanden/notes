@@ -5,30 +5,32 @@ date: 2017-12-20T11:53:49-07:00
 description: "Applying Functions To List Items"
 type: technical_note
 draft: false
----
-### Create a list of regiment names
+---Sometimes you want to transform your lists items and there is a couple of ways to do that. Below are three examples of how you would apply a function function that capitalizes characters from `['a', 'b', 'c']` to `['A', 'B', 'C']`. 
+
+In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in `map()` function which iterates over the list with str.upper applied. In the third example we apply the string method `upper()` in a list comprehension.
+## Create a list with characters
 
 
 ```python
-regimentNames = ['Night Riflemen', 'Jungle Scouts', 'The Dragoons', 'Midnight Revengence', 'Wily Warriors']
+alphabet = ['g', 'o', 'o', 'g', 'l', 'e']
 ```
 
 ## Using A For Loop
 
-### Create a for loop goes through the list and capitalizes each
+### Create a for loop that goes through the list alphabet and capitalizes each character
 
 
 ```python
 # create a variable for the for loop results
-regimentNamesCapitalized_f = []
+alphabet_capitalized_for_loop = []
 
-# for every item in regimentNames
-for i in regimentNames:
-    # capitalize the item and add it to regimentNamesCapitalized_f
-    regimentNamesCapitalized_f.append(i.upper())
+# for every item in alphabet
+for i in alphabet:
+    # capitalize the item and add it to alphabet_capitalized_for_loop
+    alphabet_capitalized_for_loop.append(i.upper())
     
-# View the outcome
-regimentNamesCapitalized_f
+# view the outcome
+alphabet_capitalized_for_loop
 ```
 
 
@@ -36,11 +38,7 @@ regimentNamesCapitalized_f
 
 
 
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
+    ['G', 'O', 'O', 'G', 'L', 'E']
 
 
 
@@ -48,18 +46,14 @@ regimentNamesCapitalized_f
 
 ## Using Map()
 
-### Create a lambda function that capitalizes x
+### Map the capitalizer function to the list alphabet and convert the map into a list
 
 
 ```python
-capitalizer = lambda x: x.upper()
-```
+alphabet_capitalized_map = list(map(str.upper, alphabet))
 
-### Map the capitalizer function to regimentNames, convert the map into a list, and view the variable
-
-
-```python
-regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentNamesCapitalized_m
+# view the outcome
+alphabet_capitalized_map
 ```
 
 
@@ -67,11 +61,7 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
 
 
 
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
+    ['G', 'O', 'O', 'G', 'L', 'E']
 
 
 
@@ -79,11 +69,14 @@ regimentNamesCapitalized_m = list(map(capitalizer, regimentNames)); regimentName
 
 ## Using List Comprehension
 
-### Apply the expression x.upper to each item in the list called regiment names. Then view the output
+### Apply the expression x.upper to each item in the list alphabet
 
 
 ```python
-regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCapitalized_l
+alphabet_capitalized_list_comprehension = [x.upper() for x in alphabet]
+
+# view the outcome
+alphabet_capitalized_list_comprehension
 ```
 
 
@@ -91,11 +84,7 @@ regimentNamesCapitalized_l = [x.upper() for x in regimentNames]; regimentNamesCa
 
 
 
-    ['NIGHT RIFLEMEN',
-     'JUNGLE SCOUTS',
-     'THE DRAGOONS',
-     'MIDNIGHT REVENGENCE',
-     'WILY WARRIORS']
+    ['G', 'O', 'O', 'G', 'L', 'E']
 
 
 

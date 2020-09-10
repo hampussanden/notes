@@ -47,7 +47,8 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/basics/applying_functions_to_list_items/</guid>
-      <description>Create a list of regiment names regimentNames = [&amp;#39;Night Riflemen&amp;#39;, &amp;#39;Jungle Scouts&amp;#39;, &amp;#39;The Dragoons&amp;#39;, &amp;#39;Midnight Revengence&amp;#39;, &amp;#39;Wily Warriors&amp;#39;] Using A For Loop Create a for loop goes through the list and capitalizes each # create a variable for the for loop results regimentNamesCapitalized_f = [] # for every item in regimentNames for i in regimentNames: # capitalize the item and add it to regimentNamesCapitalized_f regimentNamesCapitalized_f.append(i.upper()) # View the outcome regimentNamesCapitalized_f [&#39;NIGHT RIFLEMEN&#39;, &#39;JUNGLE SCOUTS&#39;, &#39;THE DRAGOONS&#39;, &#39;MIDNIGHT REVENGENCE&#39;, &#39;WILY WARRIORS&#39;]  Using Map() Create a lambda function that capitalizes x capitalizer = lambda x: x.</description>
+      <description>Sometimes you want to transform your lists items and there is a couple of ways to do that. Below are three examples of how you would apply a function function that capitalizes characters from [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;] to [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;].
+In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in map() function which iterates over the list with str.</description>
     </item>
     
     <item>
@@ -60,7 +61,7 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
     </item>
     
     <item>
-      <title>Read/Import a CSV File Using Pandas</title>
+      <title>Read/Import A CSV File Using Pandas</title>
       <link>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</link>
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       

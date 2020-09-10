@@ -14,23 +14,23 @@ This function differs from a regular function, because we are using the yield ke
 
 
 ```python
-# Create a list of first names
+# create a list of first names
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 ```
 
 
 ```python
-# Create a function called "chunks" with two arguments, l and n:
+# create a function called "chunks" with two arguments, l and n:
 def chunks(l, n):
-    # For item i in a range that is a length of l,
+    # for item i in a range that is a length of l,
     for i in range(0, len(l), n):
-        # Create an index range for l of n items:
+        # create an index range for l of n items:
         yield l[i:i+n]
 ```
 
 
 ```python
-# Create a list that from the results of the function chunks:
+# create a list that from the results of the function chunks:
 list(chunks(numbers, 5))
 ```
 
