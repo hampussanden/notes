@@ -51,21 +51,21 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
     </item>
     
     <item>
-      <title>Loading A CSV Into pandas</title>
-      <link>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</link>
-      <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
-      
-      <guid>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</guid>
-      <description>import modules import pandas as pd import numpy as np Create dataframe (that we will be importing) raw_data = {&amp;#39;first_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;last_name&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;age&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df   .dataframe thead tr:only-child th { text-align: right; } .</description>
-    </item>
-    
-    <item>
       <title>Pie Chart In MatPlotLib</title>
       <link>https://hampussanden.com/python/data_visualisation/matplotlib_pie_chart/</link>
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/data_visualisation/matplotlib_pie_chart/</guid>
-      <description>Preliminaries %matplotlib inline import pandas as pd import matplotlib.pyplot as plt Create dataframe raw_data = {&amp;#39;officer_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;jan_arrests&amp;#39;: [4, 24, 31, 2, 3], &amp;#39;feb_arrests&amp;#39;: [25, 94, 57, 62, 70], &amp;#39;march_arrests&amp;#39;: [5, 43, 23, 23, 51]} df = pd.DataFrame(raw_data, columns = [&amp;#39;officer_name&amp;#39;, &amp;#39;jan_arrests&amp;#39;, &amp;#39;feb_arrests&amp;#39;, &amp;#39;march_arrests&amp;#39;]) df    officer_name jan_arrests feb_arrests march_arrests     0 Jason 4 25 5   1 Molly 24 94 43   2 Tina 31 57 23   3 Jake 2 62 23   4 Amy 3 70 51</description>
+      <description>Import modules import matplotlib.pyplot as plt %matplotlib inline Make a Pie Chart plot # Create a pie chart labels = [&amp;#39;Java&amp;#39;, &amp;#39;Python&amp;#39;, &amp;#39;JavaScript&amp;#39;, &amp;#39;C++&amp;#39;] sizes = [504, 337, 415, 280] plt.pie(# Using variable sizes for wedge-sizes sizes, # Using variable labels for wedge-labels labels=labels, # With no shadows shadow=False, # With one slide exploded out eg. Python explode=(0, 0.1, 0, 0), # With the start angle at 90% startangle=90, # With the percent listed as a fraction autopct=&amp;#39;%1.</description>
+    </item>
+    
+    <item>
+      <title>Read/Import a CSV File Using Pandas</title>
+      <link>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</link>
+      <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
+      
+      <guid>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</guid>
+      <description>Import modules import pandas as pd Create dataframe (that we will be importing) raw_data = {&amp;#39;first_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;last_name&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;age&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df   .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .</description>
     </item>
     
   </channel>

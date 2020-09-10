@@ -6,190 +6,130 @@ description: "Pie Chart In MatPlotLib."
 type: technical_note
 draft: false
 ---
-## Preliminaries
+## Import modules
 
 
 ```python
-%matplotlib inline
-import pandas as pd
 import matplotlib.pyplot as plt
+%matplotlib inline
 ```
 
-## Create dataframe
+## Make a Pie Chart plot
 
 
 ```python
-raw_data = {'officer_name': ['Jason', 'Molly', 'Tina', 'Jake', 'Amy'],
-        'jan_arrests': [4, 24, 31, 2, 3],
-        'feb_arrests': [25, 94, 57, 62, 70],
-        'march_arrests': [5, 43, 23, 23, 51]}
-df = pd.DataFrame(raw_data, columns = ['officer_name', 'jan_arrests', 'feb_arrests', 'march_arrests'])
-df
+# Create a pie chart
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+ 
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With no shadows
+        shadow=False,
+        # With one slide exploded out eg. Python
+        explode=(0, 0.1, 0, 0),
+        # With the start angle at 90%
+        startangle=90,
+        # With the percent listed as a fraction
+        autopct='%1.1f%%',
+       )
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal') 
+
+# View the plot
+plt.tight_layout()
+plt.show()
 ```
 
- 
-<div class="dataframe-wrapper">
+
     
 
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>officer_name</th>
-      <th>jan_arrests</th>
-      <th>feb_arrests</th>
-      <th>march_arrests</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Jason</td>
-      <td>4</td>
-      <td>25</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Molly</td>
-      <td>24</td>
-      <td>94</td>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Tina</td>
-      <td>31</td>
-      <td>57</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jake</td>
-      <td>2</td>
-      <td>62</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amy</td>
-      <td>3</td>
-      <td>70</td>
-      <td>51</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+![png](matplotlib_pie_chart_4_0.png)
 
 
 
-</div>
 
-
-
-```python
-# Create a column with the total arrests for each officer
-df['total_arrests'] = df['jan_arrests'] + df['feb_arrests'] + df['march_arrests']
-df
-```
-
- 
-<div class="dataframe-wrapper">
-    
-
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>officer_name</th>
-      <th>jan_arrests</th>
-      <th>feb_arrests</th>
-      <th>march_arrests</th>
-      <th>total_arrests</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Jason</td>
-      <td>4</td>
-      <td>25</td>
-      <td>5</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Molly</td>
-      <td>24</td>
-      <td>94</td>
-      <td>43</td>
-      <td>161</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Tina</td>
-      <td>31</td>
-      <td>57</td>
-      <td>23</td>
-      <td>111</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jake</td>
-      <td>2</td>
-      <td>62</td>
-      <td>23</td>
-      <td>87</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amy</td>
-      <td>3</td>
-      <td>70</td>
-      <td>51</td>
-      <td>124</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-</div>
-
-
-## Make plot
+## Add color to your Pie Chart
 
 
 ```python
 # Create a list of colors (from iWantHue)
-colors = ["#E13F29", "#D69A80", "#D63B59", "#AE5552", "#CB5C3B", "#EB8076", "#96624E"]
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
 
 # Create a pie chart
-plt.pie(
-    # using data total)arrests
-    df['total_arrests'],
-    # with the labels being officer names
-    labels=df['officer_name'],
-    # with no shadows
-    shadow=False,
-    # with colors
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With no shadows
+        shadow=False,
+        # With one slide exploded out eg. Python
+        explode=(0, 0.1, 0, 0),
+        # With the start angle at 90%
+        startangle=90,
+        # With the percent listed as a fraction
+        autopct='%1.1f%%',
+       )
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal') 
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_6_0.png)
+
+
+
+
+## Changing label colors on your Pie Chart
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+
+# Create a pie chart
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+ 
+# Specifying return datatypes to iterate
+patches, texts, autotexts = plt.pie(
+    # Using variable sizes for wedge-sizes
+    sizes,
+    # Using variable labels for wedge-labels
+    labels=labels,
+    # With colors
     colors=colors,
-    # with one slide exploded out
-    explode=(0, 0, 0, 0, 0.15),
-    # with the start angle at 90%
+    # With no shadows
+    shadow=False,
+    # With one slide exploded out eg. Python
+    explode=(0, 0.1, 0, 0),
+    # With the start angle at 90%
     startangle=90,
-    # with the percent listed as a fraction
+    # With the percent listed as a fraction
     autopct='%1.1f%%',
     )
 
-# View the plot drop above
+# Iterating text and autotext to set new colors
+for text in texts:
+    text.set_color('grey')
+for autotext in autotexts:
+    autotext.set_color('grey')
+    
+# Equal aspect ratio ensures that pie is drawn as a circle
 plt.axis('equal')
 
 # View the plot
@@ -200,7 +140,339 @@ plt.show()
 
     
 
-![png](matplotlib_pie_chart_7_0.png)
+![png](matplotlib_pie_chart_8_0.png)
 
 
 
+
+## Transform your Pie Chart into a donut
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+
+# Create a pie chart
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+ 
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With no shadows
+        shadow=False,
+        # With the start angle at 90%
+        startangle=90,
+        # With the percent listed as a fraction
+        autopct='%1.1f%%',
+       )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.70,fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal')
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_10_0.png)
+
+
+
+
+## Changing the position of labels
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+
+# Create a pie chart
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+ 
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With no shadows
+        shadow=False,
+        # With the start angle at 90%
+        startangle=90,
+        # With the percent listed as a fraction
+        autopct='%1.1f%%',
+        # Changing the position of labels
+        pctdistance=0.85,
+       )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.70,fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal')
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_12_0.png)
+
+
+
+
+## Explode your donut Pie Chart
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+
+# Create a pie chart
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+ 
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With no shadows
+        shadow=False,
+        # With all slides exploded
+        explode=(0.05,0.05,0.05,0.05),
+        # With the start angle at 90%
+        startangle=90,
+        # With the percent listed as a fraction
+        autopct='%1.1f%%',
+        # Changing the position of labels
+        pctdistance=0.85,
+       )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.70,fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal')
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_14_0.png)
+
+
+
+
+## Plot two Pie Charts next to each other
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+colors_gender = ['#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6']
+
+# Create two pie charts
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+labels_gender = ['Male','Female','Male','Female','Male','Female','Male','Female']
+sizes_gender = [315,189,125,212,270,145,190,90]
+
+# Plot first pie chart
+plt.subplot(121)
+plt.title('Programming Languages')
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With the start angle at 90%
+        startangle=90,
+        )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.5,color='black', fc='white',linewidth=0)
+fig = plt.gcf()
+fig.set_size_inches(11,11)
+fig.gca().add_artist(centre_circle)
+
+# Plot second pie chart
+plt.subplot(122)
+plt.title('Python')
+plt.pie(# Slicing the variable sizes_gender to only get the first programming language
+        sizes_gender[0:2],
+        # Slicing the variable labels_gender to only get the first programming language
+        labels=labels_gender[0:2],
+        # With colors
+        colors=colors_gender,
+        # With the start angle at 90%
+        startangle=90,
+        )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.5,color='black', fc='white',linewidth=0)
+fig = plt.gcf()
+fig.set_size_inches(11,11)
+fig.gca().add_artist(centre_circle)
+
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_16_0.png)
+
+
+
+
+## Plot two pie charts in one chart
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+colors_gender = ['#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6']
+
+# Create two pie charts
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+labels_gender = ['Male','Female','Male','Female','Male','Female','Male','Female']
+sizes_gender = [315,189,125,212,270,145,190,90]
+
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With the start angle at 90%
+        startangle=90,
+        # With frame
+        frame=True,
+        )
+
+plt.pie(# Using variable sizes_gender for wedge-sizes
+        sizes_gender,
+        # With colors
+        colors=colors_gender,
+        # With the start angle at 90%
+        startangle=90,
+        # With a radius of 0.75
+        radius=0.75,
+        )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),0.5,color='black', fc='white',linewidth=0)
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal')
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_18_0.png)
+
+
+
+
+## Explode the chart
+
+
+```python
+# Create a list of colors (from iWantHue)
+colors = ['#ff6666', '#ffcc99', '#99ff99', '#66b3ff']
+colors_gender = ['#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6']
+
+# Create two pie charts
+labels = ['Java', 'Python', 'JavaScript', 'C++']
+sizes = [504, 337, 415, 280]
+labels_gender = ['Male','Female','Male','Female','Male','Female','Male','Female']
+sizes_gender = [315,189,125,212,270,145,190,90]
+
+plt.pie(# Using variable sizes for wedge-sizes
+        sizes,
+        # Using variable labels for wedge-labels
+        labels=labels,
+        # With colors
+        colors=colors,
+        # With all slides exploded
+        explode=(0.2,0.2,0.2,0.2),
+        # With the start angle at 90%
+        startangle=90,
+        # With frame
+        frame=True,
+        # With a radius of 3
+        radius=3,
+        )
+
+plt.pie(# Using variable sizes_gender for wedge-sizes
+        sizes_gender,
+        # With colors
+        colors=colors_gender,
+        # With all slides exploded
+        explode=(0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1),
+        # With the start angle at 90%
+        startangle=90,
+        # With a radius of 2
+        radius=2,
+        )
+
+# Convert the pie chart into a circle
+centre_circle = plt.Circle((0,0),1.5,color='black', fc='white',linewidth=0)
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Equal aspect ratio ensures that pie is drawn as a circle
+plt.axis('equal')
+
+# View the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+    
+
+![png](matplotlib_pie_chart_20_0.png)
+
+
+
+
+
+```python
+
+```

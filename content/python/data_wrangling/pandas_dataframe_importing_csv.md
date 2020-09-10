@@ -1,19 +1,18 @@
 ---
-title: "Loading A CSV Into pandas"
+title: "Read/Import a CSV File Using Pandas"
 author: "Hampus Sandén"
 date: 2017-12-20T11:53:49-07:00
-description: "Loading a CSV into pandas."
+description: "Read/Import a CSV File Using Pandas"
 type: technical_note
 draft: false
 aliases:
     - /python/pandas_dataframe_importing_csv.html
 ---
-### import modules
+### Import modules
 
 
 ```python
 import pandas as pd
-import numpy as np
 ```
 
 ### Create dataframe (that we will be importing)
@@ -117,7 +116,7 @@ df
 df.to_csv('pandas_dataframe_importing_csv/example.csv')
 ```
 
-### Load a csv
+### Read a csv file
 
 
 ```python
@@ -212,7 +211,7 @@ df
 </div>
 
 
-### Load a csv with no headers
+### Read a csv file with no headers
 
 
 ```python
@@ -316,7 +315,7 @@ df
 </div>
 
 
-### Load a csv while specifying column names
+### Read a csv file while specifying column names
 
 
 ```python
@@ -420,7 +419,7 @@ df
 </div>
 
 
-### Load a csv with setting the index column to UID
+### Read a csv file with setting the index column to UID
 
 
 ```python
@@ -525,7 +524,7 @@ df
 </div>
 
 
-### Load a csv while setting the index columns to First Name and Last Name
+### Read a csv file while setting the index columns to First Name and Last Name
 
 
 ```python
@@ -632,7 +631,7 @@ df
 
 
 
-### Load a csv while specifying "." as missing values
+### Read a csv file while specifying "." as missing values
 
 
 ```python
@@ -727,7 +726,7 @@ pd.isnull(df)
 </div>
 
 
-### Load a csv while specifying "." and "NA" as missing values in the Last Name column and "." as missing values in Pre-Test Score column
+### Read a csv file while specifying "." and "NA" as missing values in the Last Name column and "." as missing values in Pre-Test Score column
 
 
 ```python
@@ -827,7 +826,7 @@ df
 </div>
 
 
-### Load a csv while skipping the top 3 rows
+### Read a csv file while skipping the top 3 rows
 
 
 ```python
@@ -895,7 +894,7 @@ df
 </div>
 
 
-### Load a csv while interpreting "," in strings around numbers as thousands seperators
+### Read a csv file while interpreting "," in strings around numbers as thousands seperators
 
 
 ```python

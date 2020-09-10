@@ -34,7 +34,7 @@ gtag('config', 'UA-138686867-1');
   "@type": "BlogPosting",
   "headline": "Pie Chart In MatPlotLib",
   "url": "https:\/\/hampussanden.com\/python\/data_visualisation\/matplotlib_pie_chart\/",
-  "wordCount": "221",
+  "wordCount": "1170",
   "datePublished": "2017-12-20T11:53:49-07:00",
   "dateModified": "2017-12-20T11:53:49-07:00",
   "author": {
@@ -148,171 +148,368 @@ MathJax.Hub.Config({
   <div class="content">
   
 
-<h2 id="preliminaries">Preliminaries</h2>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></code></pre></div>
-<h2 id="create-dataframe">Create dataframe</h2>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">raw_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;officer_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jason&#39;</span><span class="p">,</span> <span class="s1">&#39;Molly&#39;</span><span class="p">,</span> <span class="s1">&#39;Tina&#39;</span><span class="p">,</span> <span class="s1">&#39;Jake&#39;</span><span class="p">,</span> <span class="s1">&#39;Amy&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;jan_arrests&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="s1">&#39;feb_arrests&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">70</span><span class="p">],</span>
-        <span class="s1">&#39;march_arrests&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">51</span><span class="p">]}</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;officer_name&#39;</span><span class="p">,</span> <span class="s1">&#39;jan_arrests&#39;</span><span class="p">,</span> <span class="s1">&#39;feb_arrests&#39;</span><span class="p">,</span> <span class="s1">&#39;march_arrests&#39;</span><span class="p">])</span>
-<span class="n">df</span></code></pre></div>
-<div class="dataframe-wrapper">
-    
+<h2 id="import-modules">Import modules</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span></code></pre></div>
+<h2 id="make-a-pie-chart-plot">Make a Pie Chart plot</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a pie chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With no shadows</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="c1"># With one slide exploded out eg. Python</span>
+        <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With the percent listed as a fraction</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+       <span class="p">)</span>
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span> 
 
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_4_0.png" alt="png" /></p>
 
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>officer_name</th>
-      <th>jan_arrests</th>
-      <th>feb_arrests</th>
-      <th>march_arrests</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Jason</td>
-      <td>4</td>
-      <td>25</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Molly</td>
-      <td>24</td>
-      <td>94</td>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Tina</td>
-      <td>31</td>
-      <td>57</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jake</td>
-      <td>2</td>
-      <td>62</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amy</td>
-      <td>3</td>
-      <td>70</td>
-      <td>51</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p></div></p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a column with the total arrests for each officer</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_arrests&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;jan_arrests&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feb_arrests&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;march_arrests&#39;</span><span class="p">]</span>
-<span class="n">df</span></code></pre></div>
-<div class="dataframe-wrapper">
-    
-
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>officer_name</th>
-      <th>jan_arrests</th>
-      <th>feb_arrests</th>
-      <th>march_arrests</th>
-      <th>total_arrests</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Jason</td>
-      <td>4</td>
-      <td>25</td>
-      <td>5</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Molly</td>
-      <td>24</td>
-      <td>94</td>
-      <td>43</td>
-      <td>161</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Tina</td>
-      <td>31</td>
-      <td>57</td>
-      <td>23</td>
-      <td>111</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Jake</td>
-      <td>2</td>
-      <td>62</td>
-      <td>23</td>
-      <td>87</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Amy</td>
-      <td>3</td>
-      <td>70</td>
-      <td>51</td>
-      <td>124</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p></div></p>
-
-<h2 id="make-plot">Make plot</h2>
+<h2 id="add-color-to-your-pie-chart">Add color to your Pie Chart</h2>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;#E13F29&#34;</span><span class="p">,</span> <span class="s2">&#34;#D69A80&#34;</span><span class="p">,</span> <span class="s2">&#34;#D63B59&#34;</span><span class="p">,</span> <span class="s2">&#34;#AE5552&#34;</span><span class="p">,</span> <span class="s2">&#34;#CB5C3B&#34;</span><span class="p">,</span> <span class="s2">&#34;#EB8076&#34;</span><span class="p">,</span> <span class="s2">&#34;#96624E&#34;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
 
 <span class="c1"># Create a pie chart</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
-    <span class="c1"># using data total)arrests</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_arrests&#39;</span><span class="p">],</span>
-    <span class="c1"># with the labels being officer names</span>
-    <span class="n">labels</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;officer_name&#39;</span><span class="p">],</span>
-    <span class="c1"># with no shadows</span>
-    <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-    <span class="c1"># with colors</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With no shadows</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="c1"># With one slide exploded out eg. Python</span>
+        <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With the percent listed as a fraction</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+       <span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span> 
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_6_0.png" alt="png" /></p>
+
+<h2 id="changing-label-colors-on-your-pie-chart">Changing label colors on your Pie Chart</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a pie chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+ 
+<span class="c1"># Specifying return datatypes to iterate</span>
+<span class="n">patches</span><span class="p">,</span> <span class="n">texts</span><span class="p">,</span> <span class="n">autotexts</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
+    <span class="c1"># Using variable sizes for wedge-sizes</span>
+    <span class="n">sizes</span><span class="p">,</span>
+    <span class="c1"># Using variable labels for wedge-labels</span>
+    <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+    <span class="c1"># With colors</span>
     <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
-    <span class="c1"># with one slide exploded out</span>
-    <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">),</span>
-    <span class="c1"># with the start angle at 90%</span>
+    <span class="c1"># With no shadows</span>
+    <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+    <span class="c1"># With one slide exploded out eg. Python</span>
+    <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="c1"># With the start angle at 90%</span>
     <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
-    <span class="c1"># with the percent listed as a fraction</span>
+    <span class="c1"># With the percent listed as a fraction</span>
     <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
     <span class="p">)</span>
 
-<span class="c1"># View the plot drop above</span>
+<span class="c1"># Iterating text and autotext to set new colors</span>
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">:</span>
+    <span class="n">text</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">autotext</span> <span class="ow">in</span> <span class="n">autotexts</span><span class="p">:</span>
+    <span class="n">autotext</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+    
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 
 <span class="c1"># View the plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
-<p><img src="matplotlib_pie_chart_7_0.png" alt="png" /></p>
+<p><img src="matplotlib_pie_chart_8_0.png" alt="png" /></p>
 
+<h2 id="transform-your-pie-chart-into-a-donut">Transform your Pie Chart into a donut</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a pie chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With no shadows</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With the percent listed as a fraction</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+       <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.70</span><span class="p">,</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_10_0.png" alt="png" /></p>
+
+<h2 id="changing-the-position-of-labels">Changing the position of labels</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a pie chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With no shadows</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With the percent listed as a fraction</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="c1"># Changing the position of labels</span>
+        <span class="n">pctdistance</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span>
+       <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.70</span><span class="p">,</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_12_0.png" alt="png" /></p>
+
+<h2 id="explode-your-donut-pie-chart">Explode your donut Pie Chart</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a pie chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With no shadows</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+        <span class="c1"># With all slides exploded</span>
+        <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">),</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With the percent listed as a fraction</span>
+        <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="c1"># Changing the position of labels</span>
+        <span class="n">pctdistance</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span>
+       <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.70</span><span class="p">,</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_14_0.png" alt="png" /></p>
+
+<h2 id="plot-two-pie-charts-next-to-each-other">Plot two Pie Charts next to each other</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+<span class="n">colors_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create two pie charts</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+<span class="n">labels_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">]</span>
+<span class="n">sizes_gender</span> <span class="o">=</span> <span class="p">[</span><span class="mi">315</span><span class="p">,</span><span class="mi">189</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">212</span><span class="p">,</span><span class="mi">270</span><span class="p">,</span><span class="mi">145</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">90</span><span class="p">]</span>
+
+<span class="c1"># Plot first pie chart</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Programming Languages&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Plot second pie chart</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Slicing the variable sizes_gender to only get the first programming language</span>
+        <span class="n">sizes_gender</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span>
+        <span class="c1"># Slicing the variable labels_gender to only get the first programming language</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels_gender</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors_gender</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_16_0.png" alt="png" /></p>
+
+<h2 id="plot-two-pie-charts-in-one-chart">Plot two pie charts in one chart</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+<span class="n">colors_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create two pie charts</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+<span class="n">labels_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">]</span>
+<span class="n">sizes_gender</span> <span class="o">=</span> <span class="p">[</span><span class="mi">315</span><span class="p">,</span><span class="mi">189</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">212</span><span class="p">,</span><span class="mi">270</span><span class="p">,</span><span class="mi">145</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">90</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With frame</span>
+        <span class="n">frame</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes_gender for wedge-sizes</span>
+        <span class="n">sizes_gender</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors_gender</span><span class="p">,</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With a radius of 0.75</span>
+        <span class="n">radius</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_18_0.png" alt="png" /></p>
+
+<h2 id="explode-the-chart">Explode the chart</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Create a list of colors (from iWantHue)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff6666&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffcc99&#39;</span><span class="p">,</span> <span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">]</span>
+<span class="n">colors_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">,</span> <span class="s1">&#39;#c2c2f0&#39;</span><span class="p">,</span><span class="s1">&#39;#ffb3e6&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create two pie charts</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">337</span><span class="p">,</span> <span class="mi">415</span><span class="p">,</span> <span class="mi">280</span><span class="p">]</span>
+<span class="n">labels_gender</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">,</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">]</span>
+<span class="n">sizes_gender</span> <span class="o">=</span> <span class="p">[</span><span class="mi">315</span><span class="p">,</span><span class="mi">189</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">212</span><span class="p">,</span><span class="mi">270</span><span class="p">,</span><span class="mi">145</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">90</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes for wedge-sizes</span>
+        <span class="n">sizes</span><span class="p">,</span>
+        <span class="c1"># Using variable labels for wedge-labels</span>
+        <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+        <span class="c1"># With all slides exploded</span>
+        <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">),</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With frame</span>
+        <span class="n">frame</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="c1"># With a radius of 3</span>
+        <span class="n">radius</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="c1"># Using variable sizes_gender for wedge-sizes</span>
+        <span class="n">sizes_gender</span><span class="p">,</span>
+        <span class="c1"># With colors</span>
+        <span class="n">colors</span><span class="o">=</span><span class="n">colors_gender</span><span class="p">,</span>
+        <span class="c1"># With all slides exploded</span>
+        <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">),</span>
+        <span class="c1"># With the start angle at 90%</span>
+        <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># With a radius of 2</span>
+        <span class="n">radius</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="c1"># Convert the pie chart into a circle</span>
+<span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">1.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
+
+<span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="c1"># View the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></div>
+<p><img src="matplotlib_pie_chart_20_0.png" alt="png" /></p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
 </div>
   <aside>
       <div class="bug_reporting">
@@ -336,7 +533,7 @@ MathJax.Hub.Config({
 
     <footer class="footer text-center">
         <div class="container">
-            <span class="text-muted">This project contains 6 pages and is available on <a href="https://github.com/hampussanden/notes">GitHub</a>. Copyright &copy; Hampus Sandén, <time datetime="2018">2018</time>.</span>
+            <span class="text-muted">This project contains 6 pages and is available on <a href="https://github.com/hampussanden/notes">GitHub</a>. Copyright &copy; Hampus Sandén, <time datetime="2020">2020</time>.</span>
         </div>
     </footer>
 
