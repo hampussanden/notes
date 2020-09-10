@@ -5,7 +5,7 @@ date: 2017-12-20T11:53:49-07:00
 description: "Applying Functions To List Items"
 type: technical_note
 draft: false
----Sometimes you want to transform your lists items and there is a couple of ways to do that. Below are three examples of how you would apply a function function that capitalizes characters from `['a', 'b', 'c']` to `['A', 'B', 'C']`. 
+---Below are three examples of how you would apply a function that capitalizes characters from `['a', 'b', 'c']` to `['A', 'B', 'C']`. 
 
 In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in `map()` function which iterates over the list with str.upper applied. In the third example we apply the string method `upper()` in a list comprehension.
 ## Create a list with characters

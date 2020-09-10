@@ -579,6 +579,14 @@ tbody tr:nth-child(odd) {
   max-width: 100%;
 }
 
+div.content table thead {
+  border-bottom: none;
+}
+
+div.content table tbody tr:nth-child(odd) {
+  background: none;
+}
+
 
 /* ---------------------------------------------------------
 Render Math

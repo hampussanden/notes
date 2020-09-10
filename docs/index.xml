@@ -47,8 +47,8 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/basics/applying_functions_to_list_items/</guid>
-      <description>Sometimes you want to transform your lists items and there is a couple of ways to do that. Below are three examples of how you would apply a function function that capitalizes characters from [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;] to [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;].
-In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in map() function which iterates over the list with str.</description>
+      <description>Below are three examples of how you would apply a function that capitalizes characters from [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;] to [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;].
+In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in map() function which iterates over the list with str.upper applied. In the third example we apply the string method upper() in a list comprehension.</description>
     </item>
     
     <item>
