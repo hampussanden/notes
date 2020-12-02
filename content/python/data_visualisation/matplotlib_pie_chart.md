@@ -1,3 +1,4 @@
+ 
 ---
 title: "Pie Chart In MatPlotLib"
 author: "Hampus Sandén"
@@ -6,7 +7,15 @@ description: "Pie Chart In MatPlotLib."
 type: technical_note
 draft: false
 ---
+
+
+ 
+
 ## Import modules
+
+
+
+ 
 
 
 ```python
@@ -14,7 +23,15 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
+
+
+ 
+
 ## Make a Pie Chart plot
+
+
+
+ 
 
 
 ```python
@@ -44,14 +61,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_4_0.png)
 
 
 
 
+
+
+ 
+
 ## Add color to your Pie Chart
+
+
+
+ 
 
 
 ```python
@@ -87,14 +112,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_6_0.png)
 
 
 
 
+
+
+ 
+
 ## Changing label colors on your Pie Chart
+
+
+
+ 
 
 
 ```python
@@ -138,14 +171,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_8_0.png)
 
 
 
 
+
+
+ 
+
 ## Transform your Pie Chart into a donut
+
+
+
+ 
 
 
 ```python
@@ -184,14 +225,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_10_0.png)
 
 
 
 
+
+
+ 
+
 ## Changing the position of labels
+
+
+
+ 
 
 
 ```python
@@ -232,14 +281,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_12_0.png)
 
 
 
 
+
+
+ 
+
 ## Explode your donut Pie Chart
+
+
+
+ 
 
 
 ```python
@@ -282,14 +339,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_14_0.png)
 
 
 
 
+
+
+ 
+
 ## Plot two Pie Charts next to each other
+
+
+
+ 
 
 
 ```python
@@ -345,14 +410,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_16_0.png)
 
 
 
 
+
+
+ 
+
 ## Plot two pie charts in one chart
+
+
+
+ 
 
 
 ```python
@@ -402,14 +475,22 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_18_0.png)
 
 
 
 
+
+
+ 
+
 ## Explode the chart
+
+
+
+ 
 
 
 ```python
@@ -465,9 +546,11 @@ plt.show()
 ```
 
 
-    
+
 
 ![png](matplotlib_pie_chart_20_0.png)
+
+
 
 
 

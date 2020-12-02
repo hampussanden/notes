@@ -382,7 +382,7 @@ Articles
 }
 
 .article .content{
-  font-family: "Computer Modern", serif;
+  font-family: "Muli", serif;
 }
 
 .article .content p, .article .content li{
@@ -583,10 +583,6 @@ div.content table thead {
   border-bottom: none;
 }
 
-div.content table tbody tr:nth-child(odd) {
-  background: none;
-}
-
 
 /* ---------------------------------------------------------
 Render Math
@@ -594,4 +590,20 @@ Render Math
 
 div.math{
   font-size: 1em;
+}
+
+
+/* ---------------------------------------------------------
+Notes
+---------------------------------------------------------*/
+
+
+div.important-note {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border-left: 4px solid;
+  border-radius: 4px;
+  border-color: #137333;
+  background: #E6F4EA;
+  color: #212124;
 }

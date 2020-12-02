@@ -1,3 +1,4 @@
+ 
 ---
 title: "Read/Import A CSV File Using Pandas"
 author: "Hampus Sandén"
@@ -8,29 +9,44 @@ draft: false
 aliases:
     - /python/pandas_dataframe_importing_csv.html
 ---
+
+
+ 
+
 ### Import modules
+
+
+
+ 
 
 
 ```python
 import pandas as pd
 ```
 
+
+
+ 
+
 ### Create dataframe (that we will be importing)
 
 
+
+ 
+
+
 ```python
-raw_data = {'first_name': ['Jason', 'Molly', 'Tina', 'Jake', 'Amy'], 
-        'last_name': ['Miller', 'Jacobson', ".", 'Milner', 'Cooze'], 
-        'age': [42, 52, 36, 24, 73], 
+raw_data = {'date': ['2020-08-22', '2020-08-23', '2020-08-24', 'Jake', 'Amy'], 
+        'timestamp': ['Miller', 'Jacobson', ".", 'Milner', 'Cooze'], 
+        'customer_id': [42, 52, 36, 24, 73], 
         'preTestScore': [4, 24, 31, ".", "."],
         'postTestScore': ["25,000", "94,000", 57, 62, 70]}
 df = pd.DataFrame(raw_data, columns = ['first_name', 'last_name', 'age', 'preTestScore', 'postTestScore'])
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -106,17 +122,32 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Save dataframe as csv in the working director
 
 
+
+ 
+
+
 ```python
-df.to_csv('pandas_dataframe_importing_csv/example.csv')
+df.to_csv('data/example.csv')
 ```
 
+
+
+ 
+
 ### Read a csv file
+
+
+
+ 
 
 
 ```python
@@ -124,9 +155,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv')
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -208,10 +238,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file with no headers
+
+
+
+ 
 
 
 ```python
@@ -219,9 +256,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', header=None)
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -312,10 +348,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file while specifying column names
+
+
+
+ 
 
 
 ```python
@@ -323,9 +366,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', names=['UID', 'Fi
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -416,10 +458,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file with setting the index column to UID
+
+
+
+ 
 
 
 ```python
@@ -427,9 +476,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', index_col='UID', 
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -521,10 +569,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file while setting the index columns to First Name and Last Name
+
+
+
+ 
 
 
 ```python
@@ -532,9 +587,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', index_col=['First
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -626,12 +680,17 @@ df
 
 
 
-</div>
 
 
 
+
+ 
 
 ### Read a csv file while specifying "." as missing values
+
+
+
+ 
 
 
 ```python
@@ -639,9 +698,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=['.'])
 pd.isnull(df)
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -723,10 +781,17 @@ pd.isnull(df)
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file while specifying "." and "NA" as missing values in the Last Name column and "." as missing values in Pre-Test Score column
+
+
+
+ 
 
 
 ```python
@@ -734,14 +799,17 @@ sentinels = {'Last Name': ['.', 'NA'], 'Pre-Test Score': ['.']}
 ```
 
 
+
+ 
+
+
 ```python
 df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=sentinels)
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -823,10 +891,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file while skipping the top 3 rows
+
+
+
+ 
 
 
 ```python
@@ -834,9 +909,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', na_values=sentine
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -891,10 +965,17 @@ df
 
 
 
-</div>
 
+
+
+
+ 
 
 ### Read a csv file while interpreting "," in strings around numbers as thousands seperators
+
+
+
+ 
 
 
 ```python
@@ -902,9 +983,8 @@ df = pd.read_csv('pandas_dataframe_importing_csv/example.csv', thousands=',')
 df
 ```
 
- 
-<div class="dataframe-wrapper">
-    
+
+
 
 
 
@@ -986,5 +1066,6 @@ df
 
 
 
-</div>
+
+
 

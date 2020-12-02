@@ -1,3 +1,4 @@
+ 
 ---
 title: "Cleaning Up Messy Column Names"
 author: "Hampus Sandén"
@@ -8,9 +9,21 @@ draft: true
 aliases:
     - /python/pandas_cleaning_up_messy_column_names.html
 ---
+
+
+ 
+
 Sometimes you load in that DataFrame from a csv or excel file that some unlucky excel user created and you just wish everyone used Python. Why do they have to make the column names uppercase, with spaces, and whitespace all around? Do they like doing this to you? They probably hate you, that’s it. They did this:
 
+
+
+ 
+
 ### Import modules
+
+
+
+ 
 
 
 ```python
@@ -18,12 +31,16 @@ import pandas as pd
 ```
 
 
+
+ 
+
+
 ```python
 df = pd.read_csv('data/solar_power_plant.csv')
 df.head()
 ```
 
- 
+
 <div class="dataframe-wrapper">
     
 
@@ -116,8 +133,16 @@ df.head()
 </div>
 
 
+
+
+ 
+
 Now you can’t reference the columns with the convenient .{column name here} notation. You’ll have to do the [''] thing. It’s not the most horrible thing that ever happened, you’ve been through a lot. You can take it. But you’re used to the other way. Plus, what’s with those parentheses? You can’t have that.
 Luckily, pandas has a convenient .str method that you can use on text data. Since the column names are an ‘index’ type, you can use .str on them too. You can fix all these lapses of judgement by chaining together a bunch of these .str functions. Like so:
+
+
+
+ 
 
 
 ```python
@@ -125,7 +150,7 @@ df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
 df.head()
 ```
 
- 
+
 <div class="dataframe-wrapper">
     
 
@@ -216,4 +241,6 @@ df.head()
 
 
 </div>
+
+
 

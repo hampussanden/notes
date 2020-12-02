@@ -23,6 +23,6 @@ This blog is my personal notebook where i collect and share what i've learned th
 ## Contact me
 You can contact me through any of the following links in the header/menu or any of the mediums below: 
 
--   Email: 	&#104;&#097;&#109;&#112;&#117;&#115;&#115;&#097;&#110;&#100;&#101;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
+-   Email: 	&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#104;&#097;&#109;&#112;&#117;&#115;&#115;&#097;&#110;&#100;&#101;&#110;&#046;&#099;&#111;&#109;
 -   Twitter: [@hampussanden](https://twitter.com/hampussanden)
 -   LinkedIn: [@hampussanden](https://www.linkedin.com/in/hampussanden/)

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Clustering A List Of Words</title>
+      <link>https://hampussanden.com/python/data_wrangling/clustering_list_of_words/</link>
+      <pubDate>Thu, 20 Aug 2020 11:53:49 +0200</pubDate>
+      
+      <guid>https://hampussanden.com/python/data_wrangling/clustering_list_of_words/</guid>
+      <description>from fuzzywuzzy import fuzz word_list = [&amp;#39;ancestor&amp;#39;, &amp;#39;ancestry&amp;#39;, &amp;#39;elder&amp;#39;, &amp;#39;elderly&amp;#39;, &amp;#39;parent&amp;#39;, &amp;#39;parentage&amp;#39;] print(&amp;#39;input words:&amp;#39;, word_list) groups = list() for word in word_list: for g in groups: if all(fuzz.ratio(word, w) &amp;gt; 75 for w in g): g.append(word) break else: groups.append([word, ]) print(&amp;#39;output groups:&amp;#39;, groups) input words: [&#39;ancestor&#39;, &#39;ancestry&#39;, &#39;elder&#39;, &#39;elderly&#39;, &#39;parent&#39;, &#39;parentage&#39;] output groups: [[&#39;ancestor&#39;, &#39;ancestry&#39;], [&#39;elder&#39;, &#39;elderly&#39;], [&#39;parent&#39;, &#39;parentage&#39;]]  </description>
+    </item>
+    
+    <item>
       <title>Split A List Into Evenly Sized Chunks</title>
       <link>https://hampussanden.com/python/data_wrangling/split_a_list_into_evenly_sized_chunks/</link>
       <pubDate>Thu, 20 Aug 2020 11:53:49 +0200</pubDate>
@@ -47,7 +56,7 @@ I grew up in a small town in southern Sweden called Kristianstad and have a back
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/basics/applying_functions_to_list_items/</guid>
-      <description>Below are three examples of how you would apply a function that capitalizes characters from [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;] to [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;].
+      <description>Below are three examples of how you would apply a function that capitalizes characters in a list, from [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;] to [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;].
 In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in map() function which iterates over the list with str.upper applied. In the third example we apply the string method upper() in a list comprehension.</description>
     </item>
     
@@ -66,7 +75,7 @@ In the first example we are using a simple for loop to iterate over each charact
       <pubDate>Wed, 20 Dec 2017 11:53:49 -0700</pubDate>
       
       <guid>https://hampussanden.com/python/data_wrangling/pandas_dataframe_importing_csv/</guid>
-      <description>Import modules import pandas as pd Create dataframe (that we will be importing) raw_data = {&amp;#39;first_name&amp;#39;: [&amp;#39;Jason&amp;#39;, &amp;#39;Molly&amp;#39;, &amp;#39;Tina&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;last_name&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;age&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df   .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .</description>
+      <description>Import modules import pandas as pd Create dataframe (that we will be importing) raw_data = {&amp;#39;date&amp;#39;: [&amp;#39;2020-08-22&amp;#39;, &amp;#39;2020-08-23&amp;#39;, &amp;#39;2020-08-24&amp;#39;, &amp;#39;Jake&amp;#39;, &amp;#39;Amy&amp;#39;], &amp;#39;timestamp&amp;#39;: [&amp;#39;Miller&amp;#39;, &amp;#39;Jacobson&amp;#39;, &amp;#34;.&amp;#34;, &amp;#39;Milner&amp;#39;, &amp;#39;Cooze&amp;#39;], &amp;#39;customer_id&amp;#39;: [42, 52, 36, 24, 73], &amp;#39;preTestScore&amp;#39;: [4, 24, 31, &amp;#34;.&amp;#34;, &amp;#34;.&amp;#34;], &amp;#39;postTestScore&amp;#39;: [&amp;#34;25,000&amp;#34;, &amp;#34;94,000&amp;#34;, 57, 62, 70]} df = pd.DataFrame(raw_data, columns = [&amp;#39;first_name&amp;#39;, &amp;#39;last_name&amp;#39;, &amp;#39;age&amp;#39;, &amp;#39;preTestScore&amp;#39;, &amp;#39;postTestScore&amp;#39;]) df   .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .</description>
     </item>
     
   </channel>

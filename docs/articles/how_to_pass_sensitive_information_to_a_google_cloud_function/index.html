@@ -1,51 +1,423 @@
-
-
-<pre><code>&lt;div style=&quot;border:thin solid red&quot;&gt;
+<div class="important-note">
     ---
-</code></pre>
-
-<p>title: &ldquo;How to pass sensitive information to a Google Cloud Function&rdquo;
-author: &ldquo;Hampus Sandén&rdquo;
+title: "How to pass sensitive information to a Google Cloud Function"
+author: "Hampus Sandén"
 date: 2020-08-20T11:53:49+02:00
-description: &ldquo;How to pass sensitive information to a Google Cloud Function&rdquo;
-type: article</p>
+description: "How to pass sensitive information to a Google Cloud Function"
+type: article
+draft: true
+---
+</div>
 
-<h2 id="draft-true">draft: true</h2>
+<div class="important-note">
+    
+In this post we will go trough the process of creating and updating secrets via Google Secret Manager, which allows you store, manage and access text strings that should be considered secret. After we have created our secret we will have a look at how we can use Google Secret Manager to securely use our secret in a Google Cloud Function.
 
-<pre><code>&lt;/div&gt;
+Google Cloud Functions makes it easy to build serverless Python programs and quite often you need to access sensitive information when working with APIs or databases. It is possible to store this information by either hard coding it in your function or storing it in an environment varable that allows plain text strings like database passwords, API keys, or TLS certificates. It is usually not recommended to do this since any third-party dependency or library you use in your function has access to these same environment variables.
 
-&lt;div style=&quot;border:thin solid red&quot;&gt;
-</code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># https://dev.to/googlecloud/using-secrets-in-google-cloud-functions-5aem</span>
-<span class="c1"># https://codelabs.developers.google.com/codelabs/secret-manager-python/#0</span></code></pre></div>
-<pre><code>&lt;/div&gt;
+Instead we can conveniently store our secret along side our function with the help of Google Secret Manager, and access our secret at the application layer. 
+This will limit access to the secret and it will only be available to those users who can access it in Secret Manager and, of course, the Google Cloud Function at runtime.
 
-&lt;div style=&quot;border:thin solid red&quot;&gt;
-</code></pre>
+</div>
 
-<p>Google Cloud Functions makes it easy to build serverless Python programs. This post will show you how you can use the Google Secret Manager to safely and securely use secrets in your function.</p>
+<div class="important-note">
+    
+## Setup
 
-<p>Hard-coding or using environment variables to store plain-text strings that should be &ldquo;secret&rdquo;, like API keys, secret tokens for cookies, etc. generally isn&rsquo;t recommended. Any third-party dependency or library you use has access to these same environment variables.</p>
+</div>
 
-<p>However, it&rsquo;s very convenient to store secrets along side your function. You can still do it, as long as you store these secrets safely and securely.</p>
+<div class="important-note">
+    
+We will not go trough the process of setting up a project and billing account and i'll assume that any reader already know how to do this. 
 
-<p>We&rsquo;ll do this by storing our secret with the Google Secret Manager, and accessing our secrets at the application layer. Doing so will limit access to the secret to just members of your team who have access to the secret (and, of course, the function when it&rsquo;s running on Google Cloud).</p>
+If that is not the case i'll leave a link here on how to set it up. 
 
-<pre><code>&lt;/div&gt;
+I've already setup a project with a name (mine is notes-289011).
 
-&lt;div style=&quot;border:thin solid red&quot;&gt;
-</code></pre>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">secretmanager</span>
+</div>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">secretmanager</span><span class="o">.</span><span class="n">SecretManagerServiceClient</span><span class="p">()</span>
-<span class="n">secret_name</span> <span class="o">=</span> <span class="s2">&#34;my-secret&#34;</span>
-<span class="n">project_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&#34;GCP_PROJECT&#34;</span><span class="p">]</span>
-<span class="n">resource_name</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&#34;projects/{project_id}/secrets/{secret_name}/versions/latest&#34;</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">access_secret_version</span><span class="p">(</span><span class="n">resource_name</span><span class="p">)</span>
-<span class="n">secret_string</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">payload</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<div class="important-note">
+    
+While Google Cloud can be operated remotely from your laptop, in this codelab you will be using Google Cloud Shell, a command line environment running in the Cloud.
 
-<span class="k">def</span> <span class="nf">secret_hello</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">secret_string</span></code></pre></div>
-<pre><code>&lt;/div&gt;
-</code></pre>
+</div>
+
+<div class="important-note">
+    
+Now that you've created a project, the next step is to create a secret in it. 
+
+We can do this on the command line with the gcloud tool! 
+
+Also, we'll do it via Cloud Shell, so no credentials ever have to leave the cloud.
+
+First, launch Cloud Shell for your project.
+
+You should see a prompt that looks like this:
+
+</div>
+
+<div class="important-note">
+    
+Once connected to Cloud Shell, you should see that you are already authenticated and that the project is already set to your project ID.
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to notes-289011.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+hampussanden@cloudshell:~ (notes-289011)$
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+## Enable APIs
+
+</div>
+
+<div class="important-note">
+    
+Before you can begin using the Secret Manager- and Cloud Function APIs, you must enable them. Using Cloud Shell, you can enable the APIs with the following command:
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+gcloud services enable secretmanager.googleapis.com cloudfunctions.googleapis.com
+```
+
+</div>
+
+<div class="important-note">
+    
+## Creating and accessing Secrets
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+### Create a secret
+
+</div>
+
+<p>Note! For the sake of keeping all information in this post i will add my secret directly on the command line, but this is discouraged because the text string will appear in your shell history. The correct way to</p>
+
+<div class="important-note">
+    
+```plaintext
+gcloud secrets create my-secret \
+    --replication-policy="automatic"
+```
+
+</div>
+
+<div class="important-note">
+    
+### Adding a secret version
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+gcloud secrets versions add my-secret --data-file="/path/to/file.txt"
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+The --data-file=- flag allows us to pipe the secret to the gcloud command from the output of the previous command, which just echos the secret (with no newline).
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+echo -n "The answer to the ultimate question of life, the universe, and everything is 42" | \
+    gcloud secrets versions add my-secret --data-file=-
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+echo -n "The answer to the ultimate question of life, the universe, and everything is 42" | \
+    gcloud beta secrets create my-secret \
+      --data-file=- \
+      --replication-policy automatic
+```
+
+</div>
+
+<div class="important-note">
+    
+### Accessing our Secret
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+gcloud beta secrets versions access 1 --secret="my-secret"
+The answer to the ultimate question of life, the universe, and everything is 42
+```
+
+</div>
+
+<div class="important-note">
+    
+## Using Secrets Manager with a Cloud Function
+
+</div>
+
+<div class="important-note">
+    
+Now we'll write our function. Here's our whole function that we'll deploy, that will live in a file called `main.py`:
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+import os
+from google.cloud import secretmanager
+
+client = secretmanager.SecretManagerServiceClient()
+project_id = os.environ['GCP_PROJECT']
+secret_name = 'my-secret'
+secret_version = 'latest'
+response = client.access_secret_version(project_id, secret_name, secret_version)
+secret_string = response.payload.data.decode('UTF-8')
+
+def secret_hello(request):
+    return secret_string
+```
+
+</div>
+
+<div class="important-note">
+    
+This function is determining the resource name for the secret based on the function's environment, accessing the latest version of our secret, and then decoding the response, and finally returning the original string.
+
+Also note how the function is doing this work outside of the Python function itself. This will speed up our function by only accessing the secret once when the Cloud Function is instantiated, and not once for every single request.
+
+We'll also need to tell our function to install the `google-cloud-secret-manager` library, so we can access the secret from Python. In a file called `requirements.txt`, add the line:
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+google-cloud-secret-manager==0.1.1
+````
+
+</div>
+
+<div class="important-note">
+    
+At this point, your directory structure should look like this:
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+.
+├── main.py
+└── requirements.txt
+```
+
+</div>
+
+<div class="important-note">
+    
+## Giving our Cloud Function permission to access the secret
+
+</div>
+
+<div class="important-note">
+    
+
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+export PROJECT_ID=$(gcloud config get-value core/project)
+
+gcloud secrets add-iam-policy-binding my_secret_value \
+    --role roles/secretmanager.secretAccessor \
+    --member serviceAccount:${PROJECT_ID}@appspot.gserviceaccount.com
+```
+
+</div>
+
+<div class="important-note">
+    
+## Deploying our Cloud Function
+
+</div>
+
+<div class="important-note">
+    
+The last step is to deploy your function with the `gcloud` tool
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+$ gcloud functions deploy secret_hello \
+    --runtime python37 \
+    --trigger-http \
+    --allow-unauthenticated
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+
+```
+
+</div>
+
+<div class="important-note">
+    
+Now we can test our function once it's deployed:
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+Retrieve the URL of your function (httpsTrigger.url metadata) with the following command:
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+FUNCTION_URL=$(gcloud functions describe secret_hello --format 'value(httpsTrigger.url)')
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+Now, test the function can be accessed with the expected return value, by calling your function:
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+curl $FUNCTION_URL
+```
+
+</div>
+
+<div class="important-note">
+    
+
+```python
+You should see the following output:
+```
+
+</div>
+
+<div class="important-note">
+    
+```plaintext
+The answer to the ultimate question of life, the universe, and everything is 42
+```
+
+</div>
+
+<div class="important-note">
+    
+## Sources
+
+</div>
+
+<div class="important-note">
+    
+* ht<span>tps://cloud.google.com/secret-manager/docs/creating-and-accessing-secrets#secretmanager-create-secret-cli
+* ht<span>tps://dev.to/googlecloud/using-secrets-in-google-cloud-functions-5aem
+* ht<span>tps://codelabs.developers.google.com/codelabs/secret-manager-python/#0
+* ht<span>tps://cloud.google.com/sdk/gcloud/reference/functions/deploy
+
+</div>

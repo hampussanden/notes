@@ -1,3 +1,4 @@
+ 
 ---
 title: "Applying Functions To List Items"
 author: "Hampus Sandén"
@@ -5,19 +6,43 @@ date: 2017-12-20T11:53:49-07:00
 description: "Applying Functions To List Items"
 type: technical_note
 draft: false
----Below are three examples of how you would apply a function that capitalizes characters from `['a', 'b', 'c']` to `['A', 'B', 'C']`. 
+---
+
+
+ 
+Below are three examples of how you would apply a function that capitalizes characters in a list, from `['a', 'b', 'c']` to `['A', 'B', 'C']`. 
 
 In the first example we are using a simple for loop to iterate over each character in the list item. In the second example we are using the built in `map()` function which iterates over the list with str.upper applied. In the third example we apply the string method `upper()` in a list comprehension.
+
+
+ 
+
 ## Create a list with characters
+
+
+
+ 
 
 
 ```python
 alphabet = ['g', 'o', 'o', 'g', 'l', 'e']
 ```
 
+
+
+ 
+
 ## Using A For Loop
 
+
+
+ 
+
 ### Create a for loop that goes through the list alphabet and capitalizes each character
+
+
+
+ 
 
 
 ```python
@@ -34,7 +59,7 @@ alphabet_capitalized_for_loop
 ```
 
 
-    
+
 
 
 
@@ -44,9 +69,21 @@ alphabet_capitalized_for_loop
 
 
 
+
+
+ 
+
 ## Using Map()
 
+
+
+ 
+
 ### Map the capitalizer function to the list alphabet and convert the map into a list
+
+
+
+ 
 
 
 ```python
@@ -57,7 +94,7 @@ alphabet_capitalized_map
 ```
 
 
-    
+
 
 
 
@@ -67,9 +104,21 @@ alphabet_capitalized_map
 
 
 
+
+
+ 
+
 ## Using List Comprehension
 
+
+
+ 
+
 ### Apply the expression x.upper to each item in the list alphabet
+
+
+
+ 
 
 
 ```python
@@ -80,11 +129,13 @@ alphabet_capitalized_list_comprehension
 ```
 
 
-    
+
 
 
 
     ['G', 'O', 'O', 'G', 'L', 'E']
+
+
 
 
 
